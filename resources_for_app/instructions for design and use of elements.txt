@@ -1,0 +1,24 @@
+Splash screen for app: use Logo+Title+Ken Burns; i will send background, Logos that are to be used and Text
+Use a normal round circle spinner wherever needed.
+
+For front page: Use Tabs>Footer Tab > Text
+			First tab should be announcements/News (Wp post category)
+				For posts from WP website: Use Fade in left animation
+				For announcements use List>Exapandable>List big image style
+
+			Second tab should be Events ( WP post category)
+				For events: use List> Exapandable> Full image with CTA
+
+			Third tab Training Schedule (Either page/or post category; upto you) {Schedule is basically a table form document} [we can use web view to pull page as such and display]
+
+			Fourth tab Seed availbility (WP Page is better) [Also table form, can use web view to display as such]
+			
+In left side menu, use icons and add these:
+	Home link : takes to app screen no.1
+	About link: on click opens a page. It can be kept static but dynamic is better
+	Contact Link: Simple page lists button style Contact numbers, address or can also add google map with location
+	Faculty Link: Details of few people with emails and phone numbers; Use List> Exapandable> List big image style and add two button style email and phone number options on bottom of every list.
+		On click, email button should send email (launch app/open browser). Phone button should take that number to phone keypad for making a call.
+	3 other links, button style with just outbound urls (Will send urls soon, just use google.com for now)
+	Settings : to manage app settings/ unsub from notifications etc.
+	
