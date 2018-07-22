@@ -24,4 +24,11 @@ page-news {
 			border-radius: $border-radius;
 		}
 	}
+
+	.fade-in-left-item {
+		-webkit-animation: fadeInLeft 800ms;
+		-moz-animation: fadeInLeft 800ms;
+		-o-animation: fadeInLeft 800ms;
+		animation: fadeInLeft 800ms;
+	}
 }

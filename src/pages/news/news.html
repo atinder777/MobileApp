@@ -8,10 +8,10 @@
           <h1 header-title text-capitalize>{{'announcements_news.main_title'| translate}}</h1>
         </ion-list-header>
         <ion-list no-margin>
-          <ul collapsible no-margin no-padding>
+          <ul no-margin no-padding>
             <li *ngFor="let post of news.data" (tap)="openPost(post)">
               <div>
-                <ion-item border no-lines>
+                <ion-item border no-lines [ngClass]="animateClass">
                   <ion-thumbnail item-start>
                     <img *ngIf="post.better_featured_image" [src]="post.better_featured_image.source_url" />
                     <img *ngIf="!post.better_featured_image" [src]="imgPlaceholder" />

@@ -17,9 +17,6 @@ export class ExpandableLayout1 {
 		if (this.events[event]) {
 			this.events[event](item);
 		}
-		this.navCtrl.push("PostPage", {
-			post: item
-		});
 	}
 
 	toggleGroup(group: any) {

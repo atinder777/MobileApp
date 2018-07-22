@@ -12,9 +12,11 @@ export class NewsPage {
 	news: any = {}; // News that will be displayed on the page.
 	tmpVar: any = [];
 	imgPlaceholder: string = IMAGE_PLACEHOLDER;
-	@ViewChild(Nav) nav: Nav;
+	animateClass: any;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, private postProvider: PostProvider) {}
+	constructor(public navCtrl: NavController, public navParams: NavParams, private postProvider: PostProvider) {
+		this.animateClass = { "fade-in-left-item": true };
+	}
 
 	ionViewDidLoad() {
 		this.postProvider.getNews().subscribe(res => {
