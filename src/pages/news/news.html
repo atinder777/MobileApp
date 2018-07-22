@@ -1,3 +1,29 @@
 <ion-content padding>
-  <h1>News</h1>
+
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-12>
+        <!-- Header List Big Image -->
+        <ion-list-header header-section no-margin>
+          <h1 header-title text-capitalize>{{'announcements_news.main_title'| translate}}</h1>
+        </ion-list-header>
+        <ion-list no-margin>
+          <ul collapsible no-margin no-padding>
+            <li *ngFor="let post of news.data" (tap)="openPost(post)">
+              <div>
+                <ion-item border no-lines>
+                  <ion-thumbnail item-start>
+                    <img *ngIf="post.better_featured_image" [src]="post.better_featured_image.source_url" />
+                    <img *ngIf="!post.better_featured_image" [src]="imgPlaceholder" />
+                  </ion-thumbnail>
+                  <h2 item-title *ngIf="post.title">{{post.title.rendered}}</h2>
+                  <h3 item-subtitle text-wrap *ngIf="post.excerpt" [innerHTML]="post.excerpt.rendered"></h3>
+                </ion-item>
+              </div>
+            </li>
+          </ul>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

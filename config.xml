@@ -3,7 +3,7 @@
     <name>Ionic3 UI Theme - Green Light</name>
     <description>Pre-designed UI elements for Ionic 3 framework..</description>
     <author email="dev@csform.com" href="http://csform.com/">CreativeForm</author>
-    <content original-src="index.html" src="http://192.168.0.37:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://192.168.1.190:8101" />

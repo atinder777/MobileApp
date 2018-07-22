@@ -4,5 +4,6 @@
 	},
 	"announcements_news": {
 		"main_title": "News"
-	}
+	},
+	"post": { "main_title": "Post" }
 }

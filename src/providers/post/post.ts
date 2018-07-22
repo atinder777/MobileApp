@@ -1,32 +1,40 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { URL_ENGLISH } from "../../consts/main";
 
-/*
-  Generated class for the PostProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class PostProvider {
-  constructor(public http: HttpClient) {
-    console.log("Hello PostProvider Provider");
-  }
+	constructor(public http: HttpClient) {
+		console.log("Hello PostProvider Provider");
+	}
 
-  /**
-   * @returns {Array} Returns an array of posts.
-   */
-  getPosts() {
-    return this.http.get("http://backend.agristudy.com/wp-json/wp/v2/posts?_embed");
-  }
+	/**
+	 * @returns {Array} Returns an array of news.
+	 */
+	getNews() {
+		return this.http.get(`${URL_ENGLISH}/posts?_embed`);
+	}
 
-  /**
-   *
-   * @param id
-   * @description returns the post from a given post id.
-   * @returns {Object}
-   */
-  getPostById(id: number) {
-    return this.http.get(`http://backend.agristudy.com/wp-json/wp/v2/posts/${id}?_embed`);
-  }
+	/**
+	 *
+	 * @param id
+	 * @description returns the post from a given post id.
+	 * @returns {Object}
+	 */
+	getPostById(id: number) {
+		return this.http.get(`${URL_ENGLISH}/posts/${id}?_embed`);
+	}
+
+	/**
+	 *
+	 * @param id user id
+	 * @description returns a user by a given id.
+	 */
+	getUser(id: number) {
+		return this.http.get(`${URL_ENGLISH}/users/${id}`);
+	}
+
+	getCategory(id: number) {
+		return this.http.get(`${URL_ENGLISH}/categories/${id}`);
+	}
 }
