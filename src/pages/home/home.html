@@ -6,24 +6,14 @@
     </button>
     <!-- <div buy *ngIf="isBuyButtonEnabled"> -->
     <div buy>
-      <ion-title>{{data.toolbarTitle}}</ion-title>
-      <button ion-button defoult-button onclick="window.open('https://codecanyon.net/item/ionic-3-ui-theme-template-app-ios-11-style-green-light/20884976?s_rank=1?ref=CreativeForm')">
-        BUY NOW
-      </button>
+      <ion-title>{{ 'home.main_title' | translate}}</ion-title>
     </div>
     <!-- <ion-title>{{data.toolbarTitle}}</ion-title> -->
   </ion-navbar>
 </ion-header>
 <!--Fist Screen Content-->
 <ion-content>
-  <div *ngIf="data != null && data.background != null" background-size default-background [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
-    <div class="ionic-description" text-center>
-      <h2 item-title>{{data.title}}</h2>
-      <h2 item-title>{{data.subtitle}}</h2>
-      <p item-subtitle>{{data.subtitle2}}</p>
-    </div>
-    <a [href]="data.link">
-      {{data.description}}
-    </a>
-  </div>
+
+  <tabs-layout-1 [data]="params.data" [events]="params.events">
+  </tabs-layout-1>
 </ion-content>
