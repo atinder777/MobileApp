@@ -1,0 +1,8 @@
+{
+  "name": "Ionic-3-Green-Light",
+  "app_id": "3fd41324",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
