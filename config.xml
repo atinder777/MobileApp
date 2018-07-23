@@ -5,6 +5,7 @@
     <author email="dev@csform.com" href="http://csform.com/">CreativeForm</author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://192.168.1.190:8101" />
     <allow-intent href="http://*/*" />
