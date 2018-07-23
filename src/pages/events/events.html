@@ -11,7 +11,7 @@
                                     <!-- Subtitle Card -->
                                     <h3 ion-text text-wrap text-capitalize item-subtitle *ngIf="post.date">{{post.date}}</h3>
                                     <!-- Title Card -->
-                                    <h1 ion-text text-wrap header-title *ngIf="post.title" [innerHTML]="post.title.rendered"></h1>
+                                    <h2 ion-text text-wrap text-capitalize item-subtitle *ngIf="post.title" [innerHTML]="post.title.rendered"></h2>
                                     <!-- Icon And Text For Read More-->
                                     <div read-more>
                                         <ion-icon icon-medium float-left name="ios-arrow-dropright"></ion-icon>

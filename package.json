@@ -21,7 +21,9 @@
     "@angular/platform-browser": "5.0.3",
     "@angular/platform-browser-dynamic": "5.0.3",
     "@ionic-native/barcode-scanner": "4.4.2",
+    "@ionic-native/call-number": "^4.10.0",
     "@ionic-native/core": "4.4.0",
+    "@ionic-native/email-composer": "^4.10.0",
     "@ionic-native/firebase": "4.4.2",
     "@ionic-native/google-analytics": "4.4.2",
     "@ionic-native/splash-screen": "4.4.0",
@@ -31,10 +33,12 @@
     "@ngx-translate/http-loader": "^2.0.1",
     "angular2-google-maps": "0.17.0",
     "angularfire2": "5.0.0-rc.5-next",
+    "call-number": "^1.0.1",
     "cordova-android": "6.4.0",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-email-composer": "^0.8.15",
     "cordova-plugin-firebase": "^0.1.25",
     "cordova-plugin-flashlight": "^3.2.0",
     "cordova-plugin-google-analytics": "^1.8.3",
@@ -86,7 +90,9 @@
       "cordova-plugin-spinner-dialog": {},
       "cordova-plugin-vibration": {},
       "cordova-plugin-x-toast": {},
-      "cordova-plugin-console": {}
+      "cordova-plugin-console": {},
+      "mx.ferreyra.callnumber": {},
+      "cordova-plugin-email-composer": {}
     },
     "platforms": [
       "android"

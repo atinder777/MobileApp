@@ -1,0 +1,67 @@
+<!--
+  Generated template for the FacultyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Faculty</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12>
+        <!-- Header List Big Image -->
+        <ion-list-header header-section no-margin>
+          <h1 header-title text-capitalize>{{data.header}}</h1>
+        </ion-list-header>
+        <ion-list no-margin>
+          <ul collapsible no-margin no-padding>
+            <li *ngFor="let group of data.items;">
+              <!-- List big image Header -->
+              <div collapsible-header (click)="toggleGroup(group)">
+                <ion-item border no-lines>
+                  <ion-thumbnail item-start>
+                    <img [src]="group.image" alt="{{group.title}}" />
+                  </ion-thumbnail>
+                  <h2 item-title>{{group.title}}</h2>
+                  <h3 item-subtitle text-wrap>{{group.description}}</h3>
+                </ion-item>
+              </div>
+              <!-- End List big image Header -->
+              <!-- List big image Body -->
+              <div item-accordion [ngClass]="{'active': isGroupShown(group) }" [hidden]="!isGroupShown(group)">
+                <ion-item border no-margin no-lines *ngFor="let item of group.expandItems;" (tap)="action(item.type, item.description)">
+                  <!-- Avatar -->
+                  <!-- <ion-avatar item-left item-start>
+                    <img [src]="item.image" alt="{{item.title}}" />
+                  </ion-avatar> -->
+                  <!-- Title -->
+                  <h2 *ngIf="item.type != 'links'" subitem-title text-wrap>{{item.title}}</h2>
+                  <!-- Subtitle -->
+                  <h3 *ngIf="item.type != 'links'" subitem-subtitle text-wrap>{{item.description}}</h3>
+                  <!-- Details item-->
+                  <div *ngIf="item.type != 'links'" item-content subitem-subtitle>
+                    <i class="icon" [ngClass]="item.icon"></i>
+                  </div>
+                  <div text-center *ngIf="item.type === 'links'">
+                    <a ion-button *ngFor="let i of item.links" [href]="i.link">
+                      {{i.name}}
+                    </a>
+                  </div>
+                </ion-item>
+              </div>
+              <!-- End List big image Body -->
+            </li>
+          </ul>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

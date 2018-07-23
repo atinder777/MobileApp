@@ -18,6 +18,8 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { GoogleAnalytics } from "@ionic-native/google-analytics";
 import { PostProvider } from "../providers/post/post";
+import { CallNumber } from "@ionic-native/call-number";
+import { EmailComposer } from "@ionic-native/email-composer";
 
 // import ngx-translate and the http loader
 import { TranslateModule, TranslateLoader, TranslatePipe } from "@ngx-translate/core";
@@ -47,6 +49,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 	entryComponents: [MyApp],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	providers: [
+		EmailComposer,
+		CallNumber,
 		BarcodeScanner,
 		StatusBar,
 		SplashScreen,

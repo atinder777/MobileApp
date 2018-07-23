@@ -64,18 +64,17 @@ export class MyApp {
 	openPage(page) {
 		// close the menu when clicking a link from the menu
 		// navigate to the new page if it is not the current page
-		if (page.singlePage) {
-			this.menu.open();
-			this.nav.push(this.getPageForOpen(page.theme), {
-				service: this.getServiceForPage(page.theme),
-				page: page,
-				componentName: page.theme
-			});
-		} else {
-			this.nav.setRoot("ItemsPage", {
-				componentName: page.theme
-			});
-		}
+		// if (page.singlePage) {
+		// 	this.menu.open();
+		// 	this.nav.push(this.getPageForOpen(page.component), {
+		// 		service: this.getServiceForPage(page.component),
+		// 		page: page.component
+		// 	});
+		// } else {
+		// }
+		this.nav.push(page.component, {
+			componentName: page.component
+		});
 	}
 
 	getPageForOpen(value: string): any {

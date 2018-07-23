@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, LoadingController } from "ionic-angular";
 import { PostProvider } from "../../providers/post/post";
 import { IMAGE_PLACEHOLDER } from "../../consts/main";
 
@@ -17,9 +17,17 @@ import { IMAGE_PLACEHOLDER } from "../../consts/main";
 })
 export class EventsPage {
 	events: any = {};
-	constructor(public navCtrl: NavController, public navParams: NavParams, private postProvider: PostProvider) {}
+	loader: any;
+	constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		private postProvider: PostProvider,
+		private load: LoadingController
+	) {}
 
 	ionViewWillLoad() {
+		this.loader = this.load.create({ content: "Loading..." });
+		this.loader.present();
 		this.postProvider.getNews().subscribe(res => {
 			this.events.data = [];
 			this.events.data = res;
@@ -31,6 +39,7 @@ export class EventsPage {
 				}
 				this.events.data[index].show = false;
 			});
+			this.loader.dismiss();
 			console.log(this.events);
 		});
 	}
