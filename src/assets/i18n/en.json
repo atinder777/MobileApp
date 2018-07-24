@@ -7,5 +7,5 @@
 	},
 	"post": { "main_title": "Post" },
 	"events": { "main_title": "Events", "details": "Details", "read_more": "Read More" },
-	"settings": { "main_title": "Settings", "push": "Enable Push Notifications", "language": "Choose your language" }
+	"settings": { "main_title": "Settings", "push": "Push Notifications", "language": "Choose your language" }
 }
