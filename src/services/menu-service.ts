@@ -1,13 +1,12 @@
 import { IService } from "./IService";
-import { AngularFireDatabase } from "angularfire2/database";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 import { AppSettings } from "./app-settings";
 import { LoadingService } from "./loading-service";
 
 @Injectable()
-export class MenuService implements IService {
-	constructor(public af: AngularFireDatabase, private loadingService: LoadingService) {}
+export class MenuService {
+	constructor(private loadingService: LoadingService) {}
 
 	getId = (): string => "menu";
 
@@ -67,30 +66,11 @@ export class MenuService implements IService {
 	load(item: any): Observable<any> {
 		var that = this;
 		that.loadingService.show();
-		if (AppSettings.IS_FIREBASE_ENABLED) {
-			return new Observable(observer => {
-				this.af
-					.object("menu")
-					.valueChanges()
-					.subscribe(
-						snapshot => {
-							that.loadingService.hide();
-							observer.next(snapshot);
-							observer.complete();
-						},
-						err => {
-							that.loadingService.hide();
-							observer.error([]);
-							observer.complete();
-						}
-					);
-			});
-		} else {
-			return new Observable(observer => {
-				that.loadingService.hide();
-				observer.next(this.getDataForTheme());
-				observer.complete();
-			});
-		}
+
+		return new Observable(observer => {
+			that.loadingService.hide();
+			observer.next(this.getDataForTheme());
+			observer.complete();
+		});
 	}
 }

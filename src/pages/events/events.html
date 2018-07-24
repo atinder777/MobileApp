@@ -15,7 +15,7 @@
                                     <!-- Icon And Text For Read More-->
                                     <div read-more>
                                         <ion-icon icon-medium float-left name="ios-arrow-dropright"></ion-icon>
-                                        <span span-medium>{{'events.read_more' | translate}}</span>
+                                        <span span-medium>{{'events.details' | translate}}</span>
                                     </div>
                                 </ion-item>
                             </div>
@@ -34,6 +34,10 @@
                                         <h2 margin-top subitem-title [innerHTML]="post.title.rendered"></h2>
                                         <!-- Description -->
                                         <p subitem-subtitle [innerHTML]="post.excerpt.rendered"></p>
+                                        <div read-more>
+                                            <ion-icon style="margin-top: -10px" icon-medium float-left name="ios-arrow-dropright"></ion-icon>
+                                            <span span-medium>{{'events.read_more' | translate}}</span>
+                                        </div>
                                     </div>
                                 </ion-item>
                             </div>

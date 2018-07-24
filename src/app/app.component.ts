@@ -4,11 +4,11 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 
 import { MenuService } from "../services/menu-service";
-import { AppSettings } from "../services/app-settings";
 
 import { IService } from "../services/IService";
 
 import { TranslateService } from "@ngx-translate/core";
+import { NativeStorage } from "../../node_modules/@ionic-native/native-storage";
 
 @Component({
 	templateUrl: "app.html",
@@ -29,10 +29,21 @@ export class MyApp {
 		public menu: MenuController,
 		private menuService: MenuService,
 		public modalCtrl: ModalController,
-		private translate: TranslateService
+		private translate: TranslateService,
+		private storage: NativeStorage
 	) {
 		this.initializeApp();
-		translate.setDefaultLang("en");
+
+		this.storage.getItem("lang").then(
+			res => {
+				this.translate.setDefaultLang(res);
+			},
+			err => {
+				if (err.code == 2) {
+					this.translate.setDefaultLang("en");
+				}
+			}
+		);
 
 		this.pages = menuService.getAllThemes();
 		this.leftMenuTitle = menuService.getTitle();
@@ -40,10 +51,6 @@ export class MyApp {
 		this.menuService.load(null).subscribe(snapshot => {
 			this.params = snapshot;
 		});
-
-		if (AppSettings.SHOW_START_WIZARD) {
-			this.presentProfileModal();
-		}
 	}
 
 	initializeApp() {

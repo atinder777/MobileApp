@@ -6,5 +6,6 @@
 		"main_title": "News"
 	},
 	"post": { "main_title": "Post" },
-	"events": { "main_title": "Events", "read_more": "Read More" }
+	"events": { "main_title": "Events", "details": "Details", "read_more": "Read More" },
+	"settings": { "main_title": "Settings", "push": "Enable Push Notifications", "language": "Choose your language" }
 }

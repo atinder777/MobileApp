@@ -15,7 +15,7 @@ import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 	templateUrl: "training.html"
 })
 export class TrainingPage {
-	pageUrl: string = "https://ionicframework.com";
+	pageUrl: string = "https://ionicframework.com/";
 
 	sanitizer: DomSanitizer;
 

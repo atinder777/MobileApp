@@ -1,0 +1,11 @@
+{
+	"home": {
+		"main_title": "ਨਜਠਦਫਦਢਜਢਦਪ"
+	},
+	"announcements_news": {
+		"main_title": "News"
+	},
+	"post": { "main_title": "Post" },
+	"events": { "main_title": "Events", "details": "Details", "read_more": "Read More" },
+	"settings": { "main_title": "Settings", "push": "ਨਜਠਦਫਦਢਜਢਦਪ", "language": "ਨਜਠਦਫਦਢਜਢਦਪ" }
+}

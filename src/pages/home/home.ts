@@ -25,8 +25,5 @@ export class HomePage {
 				console.log("onItemClick");
 			}
 		};
-		service.load().subscribe(snapshot => {
-			this.data = snapshot;
-		});
 	}
 }
