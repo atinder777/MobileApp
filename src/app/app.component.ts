@@ -34,17 +34,6 @@ export class MyApp {
 	) {
 		this.initializeApp();
 
-		this.storage.getItem("lang").then(
-			res => {
-				this.translate.setDefaultLang(res);
-			},
-			err => {
-				if (err.code == 2) {
-					this.translate.setDefaultLang("en");
-				}
-			}
-		);
-
 		this.pages = menuService.getAllThemes();
 		this.leftMenuTitle = menuService.getTitle();
 
@@ -59,6 +48,20 @@ export class MyApp {
 			// Here you can do any higher level native things you might need.
 			this.statusBar.styleDefault();
 			this.splashScreen.hide();
+			this.storage.getItem("lang").then(
+				res => {
+					console.log(res);
+
+					this.translate.setDefaultLang(res);
+				},
+				err => {
+					console.log(err);
+
+					if (err.code == 2) {
+						this.translate.setDefaultLang("en");
+					}
+				}
+			);
 			localStorage.setItem("mailChimpLocal", "true");
 		});
 	}
@@ -79,7 +82,7 @@ export class MyApp {
 		// 	});
 		// } else {
 		// }
-		this.nav.push(page.component, {
+		this.nav.setRoot(page.component, {
 			componentName: page.component
 		});
 	}

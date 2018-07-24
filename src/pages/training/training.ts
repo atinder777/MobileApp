@@ -25,7 +25,11 @@ export class TrainingPage {
 
 	constructor(sanitizer: DomSanitizer, private hostElement: ElementRef) {
 		this.sanitizer = sanitizer;
-		// this.pageUrl = this.sanitizer.bypassSecurityTrustUrl("https://ionicframework.com/");
+		this.sanitizer.bypassSecurityTrustUrl("https://ionicframework.com/");
 		console.log(this.pageUrl);
+	}
+
+	getPage() {
+		return this.sanitizer.bypassSecurityTrustUrl("https://ionicframework.com/");
 	}
 }

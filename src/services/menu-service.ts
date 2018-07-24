@@ -24,11 +24,11 @@ export class MenuService {
 				icon: "icon-library",
 				component: "FacultyPage"
 			},
-			// {
-			// 	title: "Contact",
-			// 	icon: "icon-phone-in-talk",
-			// 	component: "ContactPage"
-			// },
+			{
+				title: "Contact",
+				icon: "icon-phone-in-talk",
+				component: "ContactPage"
+			},
 			{
 				title: "Settings",
 				icon: "icon-settings",
