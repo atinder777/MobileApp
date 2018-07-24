@@ -18,7 +18,7 @@ export class HomePage {
 			{ page: "NewsPage", icon: "ios-information-circle", title: "News" },
 			{ page: "EventsPage", icon: "ios-calendar", title: "Events" },
 			{ page: "TrainingPage", icon: "ios-clipboard", title: "Training Schedule" },
-			{ page: "SeedPage", icon: "ios-leaf", title: "Seed Avaibility" }
+			{ page: "MorePage", icon: "ios-more", title: "More" }
 		]; // Tabs Pages, icons and Title.
 		this.params.events = {
 			onItemClick: function(item: any) {
