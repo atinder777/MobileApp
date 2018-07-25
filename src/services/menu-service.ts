@@ -3,10 +3,11 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 import { AppSettings } from "./app-settings";
 import { LoadingService } from "./loading-service";
+import { NativeStorage } from "../../node_modules/@ionic-native/native-storage";
 
 @Injectable()
 export class MenuService {
-	constructor(private loadingService: LoadingService) {}
+	constructor(private loadingService: LoadingService, private storage: NativeStorage) {}
 
 	getId = (): string => "menu";
 

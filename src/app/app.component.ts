@@ -1,5 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
-import { Platform, MenuController, Nav, ModalController } from "ionic-angular";
+import { Platform, MenuController, Nav, ModalController, AlertController } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 
@@ -30,7 +30,8 @@ export class MyApp {
 		private menuService: MenuService,
 		public modalCtrl: ModalController,
 		private translate: TranslateService,
-		private storage: NativeStorage
+		private storage: NativeStorage,
+		private alertCtrl: AlertController
 	) {
 		this.initializeApp();
 
@@ -59,10 +60,34 @@ export class MyApp {
 
 					if (err.code == 2) {
 						this.translate.setDefaultLang("en");
+						this.alertCtrl
+							.create({
+								title: "Language",
+								message: "Which Language would you like to use?",
+								buttons: [
+									{
+										text: "English",
+										handler: () => {
+											this.translate.setDefaultLang("en");
+											this.storage.setItem("lang", "en");
+										}
+									},
+									{
+										/////////////////////////
+										text: "ਨਜਠਦਨਜਠਦ", // Change to Punjab here
+										handler: () => {
+											this.translate.setDefaultLang("punjab");
+											this.storage.setItem("lang", "punjab");
+										}
+									}
+								]
+							})
+							.present();
 					}
 				}
 			);
-			localStorage.setItem("mailChimpLocal", "true");
+
+			// localStorage.setItem("mailChimpLocal", "true");
 		});
 	}
 

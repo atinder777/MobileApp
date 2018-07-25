@@ -11,13 +11,13 @@
     </button>
 
     <ion-navbar>
-      <ion-title>About</ion-title>
+      <ion-title>{{'about.main_title' | translate}}</ion-title>
     </ion-navbar>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <h1>About</h1>
-  <div [innerHTML]="params.data"></div>
+  <h1>{{'about.h1' | translate}}</h1>
+  <div [innerHTML]="'about.description' | translate"></div>
 </ion-content>
