@@ -18,6 +18,7 @@ import { IMAGE_PLACEHOLDER } from "../../consts/main";
 export class EventsPage {
 	events: any = {};
 	loader: any;
+	tmpArray: any = [];
 	constructor(
 		public navCtrl: Nav,
 		public navParams: NavParams,
@@ -26,22 +27,46 @@ export class EventsPage {
 	) {}
 
 	ionViewWillLoad() {
+		let that = this;
 		this.loader = this.load.create({ content: "Loading..." });
 		this.loader.present();
-		this.postProvider.getNews().subscribe(res => {
+		this.postProvider.getActivities().subscribe(res => {
 			this.events.data = [];
-			this.events.data = res;
-			this.events.data.forEach((val, index) => {
-				if (this.events.data[index].better_featured_image === null) {
-					this.events.data[index].backgroudImage = IMAGE_PLACEHOLDER;
+			this.tmpArray.data = res;
+			this.tmpArray.data.forEach((val, index) => {
+				if (this.tmpArray.data[index].better_featured_image === null) {
+					this.tmpArray.data[index].backgroudImage = IMAGE_PLACEHOLDER;
 				} else {
-					this.events.data[index].backgroudImage = this.events.data[index].better_featured_image.source_url;
+					this.tmpArray.data[index].backgroudImage = this.tmpArray.data[index].better_featured_image.source_url;
 				}
-				this.events.data[index].show = false;
+				this.tmpArray.data[index].show = false;
+				this.tmpArray.data[index].animateClass = { "fade-in-left-item": false };
+				setTimeout(function() {
+					that.events.data.push(that.tmpArray.data[index]);
+					that.events.data[index].animateClass = { "fade-in-left-item": true };
+				}, 200 * index);
 			});
 			this.loader.dismiss();
 			console.log(this.events);
 		});
+	}
+
+	ionViewWillEnter() {
+		if (this.events.data) {
+			let that = this;
+			let tmp = this.events.data;
+			this.events.data = [];
+
+			for (let i = 0; i < tmp.length; i++) {
+				tmp[i].animateClass = { "fade-in-left-item": false };
+				setTimeout(function() {
+					console.log(that.events);
+
+					that.events.data.push(tmp[i]);
+					that.events.data[i].animateClass = { "fade-in-left-item": true };
+				}, 200 * i);
+			}
+		}
 	}
 
 	openPost(post) {

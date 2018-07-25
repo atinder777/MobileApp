@@ -27,7 +27,7 @@
         </ion-list-header>
         <ion-list no-margin>
           <ul collapsible no-margin no-padding>
-            <li *ngFor="let group of data.items;">
+            <li *ngFor="let group of data.items;" [ngClass]="group.animateClass">
               <!-- List big image Header -->
               <div collapsible-header (click)="toggleGroup(group)">
                 <ion-item border no-lines>

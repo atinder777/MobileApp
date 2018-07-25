@@ -18,15 +18,15 @@ export class HomePage {
 
 	constructor(public navCtrl: NavController, public service: HomeService, private translate: TranslateService) {
 		this.params.data = [
-			{ page: "NewsPage", icon: "ios-information-circle", title: "News" },
-			{ page: "EventsPage", icon: "ios-calendar", title: "Events" },
+			{ page: "NewsPage", icon: "ios-information-circle", title: "Notices" },
+			{ page: "EventsPage", icon: "ios-calendar", title: "Activities" },
 			{ page: "TrainingPage", icon: "ios-clipboard", title: "Training Schedule" },
 			{ page: "MorePage", icon: "ios-more", title: "More" }
 		];
 		// //Change to punjab here
 		// this.params.data = [
-		// 	{ page: "NewsPage", icon: "ios-information-circle", title: "ਨਜਠਦ" },
-		// 	{ page: "EventsPage", icon: "ios-calendar", title: "ਨਜਠਦ" },
+		// 	{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
+		// 	{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
 		// 	{ page: "TrainingPage", icon: "ios-clipboard", title: "ਨਜਠਦ" },
 		// 	{ page: "MorePage", icon: "ios-more", title: "ਨਜ" }
 		// ]; // End changes to punjab.

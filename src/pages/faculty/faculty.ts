@@ -1,7 +1,9 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, LoadingController } from "ionic-angular";
 import { CallNumber } from "@ionic-native/call-number";
 import { EmailComposer } from "@ionic-native/email-composer";
+import { PostProvider } from "../../providers/post/post";
+import { IMAGE_PLACEHOLDER } from "../../consts/main";
 
 /**
  * Generated class for the FacultyPage page.
@@ -16,119 +18,73 @@ import { EmailComposer } from "@ionic-native/email-composer";
 	templateUrl: "faculty.html"
 })
 export class FacultyPage {
-	data: any;
+	data: any = {};
+	tmpArray: any = {};
+	load: any;
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private callNumber: CallNumber,
-		private emailComposer: EmailComposer
+		private emailComposer: EmailComposer,
+		private postProvider: PostProvider,
+		private loadController: LoadingController
 	) {}
 
 	ionViewDidLoad() {
-		this.data = {
-			header: "Faculty",
-			items: [
-				{
-					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-					expandItems: [
-						{
-							description: "+199992929292",
-							type: "phone",
-							id: 1,
-							icon: "icon-phone",
-							title: "Phone"
-						},
-						{
-							description: "test@gmail.com",
-							type: "email",
-							id: 2,
-							icon: "icon-email",
-							title: "Email"
-						},
-						{
-							description: "Links",
-							type: "links",
-							id: 3,
-							links: [
-								{ name: "Google", link: "http://www.google.com" },
-								{ name: "Google", link: "http://www.google.com" },
-								{ name: "Google", link: "http://www.google.com" }
-							]
-						}
-					],
-					id: 1,
-					image: "https://randomuser.me/api/portraits/men/65.jpg",
-					title: "Nashir Vivaldi"
-				},
-				{
-					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-					expandItems: [
-						{
-							description: "+199992929292",
-							type: "phone",
-							id: 1,
-							icon: "icon-phone",
-							title: "Phone"
-						},
-						{
-							description: "test@gmail.com",
-							type: "email",
-							id: 2,
-							icon: "icon-email",
-							title: "Email"
-						},
-						{
-							description: "Links",
-							type: "links",
-							id: 3,
-							links: [
-								{ name: "Google", link: "http://www.google.com" },
-								{ name: "Google", link: "http://www.google.com" },
-								{ name: "Google", link: "http://www.google.com" }
-							]
-						}
-					],
-					id: 1,
-					image: "https://randomuser.me/api/portraits/men/66.jpg",
-					title: "Nashir Vivaldi"
-				},
-				{
-					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-					expandItems: [
-						{
-							description: "+199992929292",
-							type: "phone",
-							id: 1,
-							icon: "icon-phone",
-							title: "Phone"
-						},
-						{
-							description: "test@gmail.com",
-							type: "email",
-							id: 2,
-							icon: "icon-email",
-							title: "Email"
-						},
-						{
-							description: "Links",
-							type: "links",
-							id: 3,
-							links: [
-								{ name: "Google", link: "http://www.google.com" },
-								{ name: "Google", link: "http://www.google.com" },
-								{ name: "Google", link: "http://www.google.com" }
-							]
-						}
-					],
-					id: 1,
-					image: "https://randomuser.me/api/portraits/men/67.jpg",
-					title: "Nashir Vivaldi"
+		this.load = this.loadController.create({ content: "Loading..." });
+		this.load.present();
+		let that = this;
+		this.data.items = [];
+		this.tmpArray.data = [];
+		this.postProvider.getExperts().subscribe(res => {
+			this.tmpArray.data = res;
+			this.load.dismiss();
+			this.tmpArray.data.forEach((val, i) => {
+				let img;
+				if (val.better_featured_image === null) {
+					img = IMAGE_PLACEHOLDER;
+				} else {
+					img = val.better_featured_image.source_url;
 				}
-			]
-		};
+				let obj = {
+					animateClass: { "fade-in-left-item": true },
+					image: img,
+					title: val.title.rendered,
+					description: val.title.rendered,
+					expandItems: [
+						{
+							description: val.acf.contact,
+							type: "phone",
+							id: 1,
+							icon: "icon-phone",
+							title: "Phone"
+						},
+						{
+							description: val.acf.email,
+							type: "email",
+							id: 2,
+							icon: "icon-email",
+							title: "Email"
+						}
+						// {
+						// 	description: "Links",
+						// 	type: "links",
+						// 	id: 3,
+						// 	links: [
+						// 		{ name: "Google", link: "http://www.google.com" },
+						// 		{ name: "Google", link: "http://www.google.com" },
+						// 		{ name: "Google", link: "http://www.google.com" }
+						// 	]
+						// }
+					]
+				};
+
+				console.log(obj);
+				setTimeout(function() {
+					that.data.items.push(obj);
+				}, 200 * i);
+			});
+		});
 		console.log("ionViewDidLoad FacultyPage");
 	}
 
@@ -138,6 +94,24 @@ export class FacultyPage {
 
 	isGroupShown(group: any) {
 		return group.show;
+	}
+
+	onViewWillEnter() {
+		if (this.data.item) {
+			let that = this;
+			let tmp = this.data.item;
+			this.data.item = [];
+
+			for (let i = 0; i < tmp.length; i++) {
+				tmp[i].animateClass = { "fade-in-left-item": false };
+				setTimeout(function() {
+					console.log(that.data);
+
+					that.data.item.push(tmp[i]);
+					that.data.item[i].animateClass = { "fade-in-left-item": true };
+				}, 200 * i);
+			}
+		}
 	}
 
 	action(type, action) {

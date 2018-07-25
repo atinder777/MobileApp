@@ -3,7 +3,7 @@
 		"main_title": "Home"
 	},
 	"announcements_news": {
-		"main_title": "News"
+		"main_title": "Notices"
 	},
 	"post": { "main_title": "Post" },
 	"seed": { "main_title": "Seed Avaibility" },
@@ -19,12 +19,12 @@
 		"main_title": "Contact"
 	},
 	"faculty": {
-		"main_title": "Faculty",
-		"header": "Faculty"
+		"main_title": "Staff",
+		"header": "Staff"
 	},
 	"more": {
 		"seed": "Seed Avaibility",
-		"faculty": "Faculty",
+		"faculty": "Staff",
 		"settings": "Settings",
 		"contact": "Contact",
 		"about": "About"

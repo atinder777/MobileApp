@@ -4,7 +4,7 @@
             <ion-col col-12 no-padding no-margin>
                 <ion-list>
                     <ul no-margin no-padding class="collapsible">
-                        <li margin *ngFor="let post of events.data">
+                        <li margin *ngFor="let post of events.data" [ngClass]="post.animateClass">
                             <!-- Expandable Full image with CTA Header-->
                             <div class="collapsible-header" (click)="toggleGroup(post)">
                                 <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + post.backgroudImage + ')'}">

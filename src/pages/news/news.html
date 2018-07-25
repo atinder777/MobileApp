@@ -11,7 +11,7 @@
           <ul no-margin no-padding>
             <li *ngFor="let post of news.data" (tap)="openPost(post)">
               <div>
-                <ion-item border no-lines [ngClass]="animateClass">
+                <ion-item border no-lines [ngClass]="post.animateClass">
                   <ion-thumbnail item-start>
                     <img *ngIf="post.better_featured_image" [src]="post.better_featured_image.source_url" />
                     <img *ngIf="!post.better_featured_image" [src]="imgPlaceholder" />

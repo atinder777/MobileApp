@@ -12,7 +12,21 @@ export class PostProvider {
 	 * @returns {Array} Returns an array of news.
 	 */
 	getNews() {
-		return this.http.get(`${URL_ENGLISH}/posts?_embed`);
+		return this.http.get(`${URL_ENGLISH}/posts?categories=3`);
+	}
+
+	/**
+	 * @returns {Array} Returns an array of news.
+	 */
+	getActivities() {
+		return this.http.get(`${URL_ENGLISH}/posts?categories=17`);
+	}
+
+	/**
+	 * @returns { Array } Returns an Array of experts.
+	 */
+	getExperts() {
+		return this.http.get(`${URL_ENGLISH}/experts`);
 	}
 
 	/**
