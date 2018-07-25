@@ -36,7 +36,6 @@ export class FacultyPage {
 							description: "+199992929292",
 							type: "phone",
 							id: 1,
-							// image: "assets/images/avatar/10.jpg",
 							icon: "icon-phone",
 							title: "Phone"
 						},
@@ -44,7 +43,6 @@ export class FacultyPage {
 							description: "test@gmail.com",
 							type: "email",
 							id: 2,
-							// image: "assets/images/avatar/11.jpg",
 							icon: "icon-email",
 							title: "Email"
 						},
@@ -71,7 +69,6 @@ export class FacultyPage {
 							description: "+199992929292",
 							type: "phone",
 							id: 1,
-							// image: "assets/images/avatar/10.jpg",
 							icon: "icon-phone",
 							title: "Phone"
 						},
@@ -79,7 +76,6 @@ export class FacultyPage {
 							description: "test@gmail.com",
 							type: "email",
 							id: 2,
-							// image: "assets/images/avatar/11.jpg",
 							icon: "icon-email",
 							title: "Email"
 						},
@@ -106,7 +102,6 @@ export class FacultyPage {
 							description: "+199992929292",
 							type: "phone",
 							id: 1,
-							// image: "assets/images/avatar/10.jpg",
 							icon: "icon-phone",
 							title: "Phone"
 						},
@@ -114,7 +109,6 @@ export class FacultyPage {
 							description: "test@gmail.com",
 							type: "email",
 							id: 2,
-							// image: "assets/images/avatar/11.jpg",
 							icon: "icon-email",
 							title: "Email"
 						},

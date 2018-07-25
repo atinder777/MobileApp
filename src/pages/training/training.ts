@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ElementRef } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 
 /**
  * Generated class for the TrainingPage page.
@@ -10,16 +11,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-training',
-  templateUrl: 'training.html',
+	selector: "page-training",
+	templateUrl: "training.html"
 })
 export class TrainingPage {
+	pageUrl: string = "https://ionicframework.com/";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	sanitizer: DomSanitizer;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TrainingPage');
-  }
+	static get parameters() {
+		return [DomSanitizer];
+	}
 
+	constructor(sanitizer: DomSanitizer, private hostElement: ElementRef) {
+		this.sanitizer = sanitizer;
+		this.sanitizer.bypassSecurityTrustUrl("https://ionicframework.com/");
+		console.log(this.pageUrl);
+	}
+
+	getPage() {
+		return this.sanitizer.bypassSecurityTrustUrl("https://ionicframework.com/");
+	}
 }

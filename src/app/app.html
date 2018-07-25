@@ -1,7 +1,7 @@
 <!---Settings Main Header-->
 <ion-split-pane when="md">
     <!-- Menu Main Top -->
-    <ion-menu [content]="content" *ngIf="params != null">
+    <ion-menu enable-menu-with-back-views [content]="content" *ngIf="params != null">
         <ion-header>
             <div header-background-image padding [ngStyle]="{'background-image': 'url(' + params.background + ')'}">
                 <img [src]="params.image">

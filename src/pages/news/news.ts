@@ -16,7 +16,7 @@ export class NewsPage {
 	loader: any;
 
 	constructor(
-		public navCtrl: NavController,
+		public navCtrl: Nav,
 		public navParams: NavParams,
 		private postProvider: PostProvider,
 		private load: LoadingController

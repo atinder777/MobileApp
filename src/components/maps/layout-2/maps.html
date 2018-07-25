@@ -1,12 +1,12 @@
 <!-- Thema Google Maps - Gmaps + About Us-->
-<ion-header>
+<!-- <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
         <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>
     </ion-navbar>
-</ion-header>
+</ion-header> -->
 <!-- Content -->
 <ion-content>
     <div header-section *ngIf="data != null">
@@ -66,7 +66,8 @@
         </ion-row>
         <ion-row>
             <ion-col col-12>
-                <agm-map [latitude]="data.map.lat" [longitude]="data.map.lng" [zoom]="data.map.zoom" [mapTypeControl]="data.map.mapTypeControl" [streetViewControl]="data.map.streetViewControl">
+                <agm-map [latitude]="data.map.lat" [longitude]="data.map.lng" [zoom]="data.map.zoom" [mapTypeControl]="data.map.mapTypeControl"
+                    [streetViewControl]="data.map.streetViewControl">
                     <agm-marker [latitude]="data.map.lat" [longitude]="data.map.lng"></agm-marker>
                 </agm-map>
             </ion-col>

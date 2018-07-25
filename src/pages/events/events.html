@@ -9,13 +9,13 @@
                             <div class="collapsible-header" (click)="toggleGroup(post)">
                                 <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + post.backgroudImage + ')'}">
                                     <!-- Subtitle Card -->
-                                    <h3 ion-text text-wrap text-capitalize item-subtitle *ngIf="post.date">{{post.date}}</h3>
+                                    <h3 ion-text text-wrap text-capitalize item-subtitle *ngIf="post.date">{{post.date | date:'dd/MM/yyyy'}}</h3>
                                     <!-- Title Card -->
                                     <h2 ion-text text-wrap text-capitalize item-subtitle *ngIf="post.title" [innerHTML]="post.title.rendered"></h2>
                                     <!-- Icon And Text For Read More-->
                                     <div read-more>
                                         <ion-icon icon-medium float-left name="ios-arrow-dropright"></ion-icon>
-                                        <span span-medium>{{'events.read_more' | translate}}</span>
+                                        <span span-medium>{{'events.details' | translate}}</span>
                                     </div>
                                 </ion-item>
                             </div>
@@ -34,6 +34,10 @@
                                         <h2 margin-top subitem-title [innerHTML]="post.title.rendered"></h2>
                                         <!-- Description -->
                                         <p subitem-subtitle [innerHTML]="post.excerpt.rendered"></p>
+                                        <div read-more>
+                                            <ion-icon style="margin-top: -10px" icon-medium float-left name="ios-arrow-dropright"></ion-icon>
+                                            <span span-medium>{{'events.read_more' | translate}}</span>
+                                        </div>
                                     </div>
                                 </ion-item>
                             </div>

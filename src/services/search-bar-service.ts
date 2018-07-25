@@ -1,5 +1,4 @@
 import { IService } from './IService';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AppSettings } from './app-settings'
@@ -7,9 +6,9 @@ import { ToastService } from './toast-service'
 import { LoadingService } from './loading-service'
 
 @Injectable()
-export class SearchBarService implements IService {
+export class SearchBarService {
 
-    constructor(public af: AngularFireDatabase, private loadingService: LoadingService, private toastCtrl: ToastService) {}
+    constructor( private loadingService: LoadingService, private toastCtrl: ToastService) {}
 
     getId = (): string => 'searchBars';
 
@@ -242,30 +241,4 @@ export class SearchBarService implements IService {
         return this.getId() + item.theme.charAt(0).toUpperCase() + "" + item.theme.slice(1);
     };
 
-    load(item: any): Observable<any> {
-        var that = this;
-        that.loadingService.show();
-        if (AppSettings.IS_FIREBASE_ENABLED) {
-            return new Observable(observer => {
-                this.af
-                    .object('searchBars/' + item.theme)
-                    .valueChanges()
-                    .subscribe(snapshot => {
-                        that.loadingService.hide();
-                        observer.next(snapshot);
-                        observer.complete();
-                    }, err => {
-                        that.loadingService.hide();
-                        observer.error([]);
-                        observer.complete();
-                    });
-            });
-        } else {
-            return new Observable(observer => {
-                that.loadingService.hide();
-                observer.next(this.getDataForTheme(item));
-                observer.complete();
-            });
-        }
-    }
 }

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams, LoadingController } from "ionic-angular";
+import { IonicPage, NavController, NavParams, LoadingController, Nav } from "ionic-angular";
 import { PostProvider } from "../../providers/post/post";
 import { IMAGE_PLACEHOLDER } from "../../consts/main";
 
@@ -19,7 +19,7 @@ export class EventsPage {
 	events: any = {};
 	loader: any;
 	constructor(
-		public navCtrl: NavController,
+		public navCtrl: Nav,
 		public navParams: NavParams,
 		private postProvider: PostProvider,
 		private load: LoadingController
