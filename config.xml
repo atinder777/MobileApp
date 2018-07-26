@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.csform.ionic.green.light" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Ionic3 UI Theme - Green Light</name>
-    <description>Pre-designed UI elements for Ionic 3 framework..</description>
-    <author email="dev@csform.com" href="http://csform.com/">CreativeForm</author>
+<widget id="com.kvkpathankot" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>KVK Pathankot</name>
+    <description>Official App for KVK Pathankot</description>
+    <author email="atinder777@gmail.com" href="http://agriexams.com/">AgriExams</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="*" />
