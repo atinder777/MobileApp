@@ -57,7 +57,7 @@ export class SettingsPage {
 			},
 			{
 				id: 2,
-				title: "ਨਜਠਦਫਦਢਜਢਦਪ", //Change the punjab language here.
+				title: "ਪੰਜਾਬੀ", //Change the punjab language here.
 				symbol: "punjab"
 			}
 		];

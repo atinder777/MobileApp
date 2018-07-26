@@ -29,8 +29,6 @@ export class ContactPage {
 			let tmp = res;
 
 			this.params.data = {
-				contentDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Luctus semper elit platea; Velit aptent euismod pede euismod facilisis? In ultrices venenatis mauris. Consequat gravida pretium ligula lectus; Lacus natoque elit elit: Imperdiet cursus fermentum suspendisse; Cum iaculis venenatis!",
 				contentTitle: "About us",
 				email: tmp[0].acf.email,
 				location:

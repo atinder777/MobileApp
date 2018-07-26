@@ -74,7 +74,7 @@ export class MyApp {
 									},
 									{
 										/////////////////////////
-										text: "ਨਜਠਦਨਜਠਦ", // Change to Punjab here
+										text: "ਪੰਜਾਬੀ", // Change to Punjab here
 										handler: () => {
 											this.translate.setDefaultLang("punjab");
 											this.storage.setItem("lang", "punjab");
