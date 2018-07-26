@@ -39,5 +39,11 @@
 		"settings": "Settings",
 		"contact": "Contact",
 		"about": "About"
+	},
+	"training": {
+		"main_title": "Training Schedule"
+	},
+	"training_grid": {
+		"main_title": "Trainings"
 	}
 }

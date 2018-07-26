@@ -4,7 +4,7 @@
 	},
 	"news": {
 		"main_title": "ਸੂਚਨਾਵਾਂ",
-		"no_data": "Not available"
+		"no_data": "ਕੋੲੀ ਵੇਰਵੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ"
 	},
 	"post": { "main_title": "ਵੇਰਵੇ" },
 	"seed": {
@@ -24,8 +24,8 @@
 	},
 	"contact": {
 		"main_title": "ਸੰਪਰਕ ਕਰੋ",
-		"contact_us": "Contact Us",
-		"here": "Here we are"
+		"contact_us": "ਸੰਪਰਕ ਕਰੋ",
+		"here": "ਪਤਾ"
 	},
 	"faculty": {
 		"main_title": "ਸਟਾਫ਼",
@@ -39,5 +39,11 @@
 		"settings": "ਸੈਟਿੰਗਾਂ",
 		"contact": "ਸੰਪਰਕ ਕਰੋ",
 		"about": "ਕੇ. ਵੀ. ਕੇ. ਬਾਰੇ"
+	},
+	"training": {
+		"main_title": "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ"
+	},
+	"training_grid": {
+		"main_title": "Trainings"
 	}
 }

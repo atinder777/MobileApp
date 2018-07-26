@@ -1,7 +1,9 @@
 <ion-content>
 
   <ion-grid no-padding>
-    <h2 *ngIf="!news.data">{{'news.no_data'}}</h2>
+    <ion-list-header *ngIf="!news.data" header-section no-margin>
+      <h2 header-title text-capitalize>{{'news.no_data' | translate}}</h2>
+    </ion-list-header>
     <ion-row *ngIf="news.data">
       <ion-col col-12>
         <!-- Header List Big Image -->

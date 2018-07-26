@@ -1,5 +1,11 @@
 <ion-content>
-    <div class="full-page">
-        <iframe allowfullscreen id="iframe" class="full-page" src="https://www.gitkraken.com/" frameborder="0"></iframe>
-    </div>
+	<ion-list-header header-section no-margin>
+		<h1 header-title text-capitalize>{{'training.main_title'| translate}}</h1>
+	</ion-list-header>
+	<ion-list no-margin *ngIf="data">
+		<ion-item [ngClass]="data.animateClass" border no-lines *ngFor="let item of data" (tap)="openTrainings(item.id)">
+			<span item-start>{{item.month}}</span>
+			<i icon-small item-end class="icon icon-calendar"></i>
+		</ion-item>
+	</ion-list>
 </ion-content>

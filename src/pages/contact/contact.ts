@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, LoadingController } from "ionic-angular";
 import { NativeStorage } from "../../../node_modules/@ionic-native/native-storage";
 import { PostProvider } from "../../providers/post/post";
 
@@ -18,14 +18,20 @@ import { PostProvider } from "../../providers/post/post";
 export class ContactPage {
 	params: any = {};
 	animateClass: any;
+	loader: any;
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private storage: NativeStorage,
-		private postProvider: PostProvider
+		private postProvider: PostProvider,
+		private loading: LoadingController
 	) {
+		this.loader = this.loading.create({ content: "Loading..." });
+		this.loader.present();
+
 		this.animateClass = { "fade-in-left-item": true };
 		this.postProvider.getContact().subscribe(res => {
+			this.loader.dismiss();
 			let tmp = res;
 
 			this.params.data = {
