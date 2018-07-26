@@ -3,7 +3,7 @@
     <name>KVK Pathankot</name>
     <description>Official App for KVK Pathankot</description>
     <author email="atinder777@gmail.com" href="http://agriexams.com/">AgriExams</author>
-    <content original-src="index.html" src="http://192.168.43.88:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-navigation href="http://ionic.local/*" />
@@ -124,4 +124,5 @@
     <allow-navigation href="http://192.168.43.88:8100" />
     <engine name="ios" spec="4.5.1" />
     <engine name="android" spec="6.4.0" />
+    <allow-navigation href="http://192.168.43.88:8101" />
 </widget>

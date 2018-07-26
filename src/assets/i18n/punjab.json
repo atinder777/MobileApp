@@ -45,5 +45,9 @@
 	},
 	"training_grid": {
 		"main_title": "Trainings"
+	},
+	"training_details": {
+		"main_title": "Training Details",
+		"header": "Training Details"
 	}
 }

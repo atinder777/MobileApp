@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, Nav } from "ionic-angular";
 import { PostProvider } from "../../providers/post/post";
 
 /**
@@ -17,7 +17,7 @@ import { PostProvider } from "../../providers/post/post";
 export class TrainingGridPage {
 	data: any = [];
 	parentTrainingIds: any = [];
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public navCtrl: Nav, public navParams: NavParams) {
 		let that = this;
 		let id = navParams.get("id");
 		let elements = [
@@ -37,7 +37,7 @@ export class TrainingGridPage {
 				animation: { "fade-in-item": true }
 			},
 			{
-				image: "assets/images/skill_development.jpg",
+				image: "assets/images/skill_developement.jpg",
 				title: "Skill development trainings",
 				animation: { "fade-in-item": true }
 			},
@@ -54,18 +54,23 @@ export class TrainingGridPage {
 		];
 		let cont = 0;
 		for (let i = id + 1; i <= id + 6; i++) {
+			that.data.push({
+				id: i,
+				...elements[cont]
+			});
 			cont++;
-			console.log(i);
-			that.data.push({ id: i, ...elements[cont] });
 		}
 		console.log(this.data);
-
-		// this.postProvider.getTraining(id).subscribe(res => {});
 	}
 
 	ionViewDidLoad() {
 		console.log("ionViewDidLoad TrainingGridPage");
 	}
 
-	openTrainingsDatails(id) {}
+	openTrainingsDatails(id) {
+		console.log(id);
+		this.navCtrl.push("TrainingDetailsPage", {
+			id: id
+		});
+	}
 }

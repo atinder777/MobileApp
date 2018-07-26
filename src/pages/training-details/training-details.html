@@ -1,0 +1,65 @@
+<!--
+  Generated template for the TrainingDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'training_details.main_title'| translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12>
+        <!-- Header List Big Image -->
+        <ion-list-header header-section no-margin>
+          <h1 header-title text-capitalize>{{'training_details.header' | translate}}</h1>
+        </ion-list-header>
+        <ion-list no-margin>
+          <ul no-margin no-padding>
+            <li *ngFor="let group of data;" [ngClass]="group.animateClass">
+              <div collapsible-header>
+                <ion-item border no-lines>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.discipline' | translate}}:</b>
+                    <span [innerHTML]="group.discipline"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.date' | translate}}:</b>
+                    <span [innerHTML]="group.date"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.nature'| translate}}:</b>
+                    <span [innerHTML]="group.nature"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.pnumber'| translate}}:</b>
+                    <span [innerHTML]="group.pnumber"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.venue'| translate}}:</b>
+                    <span [innerHTML]="group.venue"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.agency'| translate}}:</b>
+                    <span [innerHTML]="group.agency"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'training_details.details'| translate}}:</b>
+                    <span [innerHTML]="group.details"></span>
+                  </h3>
+                </ion-item>
+              </div>
+            </li>
+          </ul>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

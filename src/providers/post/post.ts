@@ -53,7 +53,7 @@ export class PostProvider {
 	/**
 	 * @returns { Array } Returns the Training page content.
 	 */
-	getTraining(id) {
+	getPostByCategory(id) {
 		return this.http.get(`${URL_ENGLISH}/posts/?categories=${id}`);
 	}
 

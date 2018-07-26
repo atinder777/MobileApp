@@ -45,5 +45,16 @@
 	},
 	"training_grid": {
 		"main_title": "Trainings"
+	},
+	"training_details": {
+		"main_title": "Training Details",
+		"header": "Training Details",
+		"discipline": "Discipline",
+		"date": "Date",
+		"nature": "Participant Nature",
+		"pnumber": "Participant No.",
+		"venue": "Venue",
+		"agency": "Organizing Agency",
+		"details": "Details"
 	}
 }
