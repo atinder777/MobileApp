@@ -2,8 +2,9 @@
 	"home": {
 		"main_title": "Home"
 	},
-	"announcements_news": {
-		"main_title": "Notices"
+	"news": {
+		"main_title": "Notices",
+		"no_data": "Not available"
 	},
 	"post": { "main_title": "Details" },
 	"seed": {
@@ -19,11 +20,12 @@
 	"about": {
 		"main_title": "About",
 		"h1": "About",
-		"description":
-			"<p>ts labl pro.</p>\n"
+		"description": "<p>ts labl pro.</p>\n"
 	},
 	"contact": {
-		"main_title": "Contact"
+		"main_title": "Contact",
+		"contact_us": "Contact Us",
+		"here": "Here we are"
 	},
 	"faculty": {
 		"main_title": "Staff",

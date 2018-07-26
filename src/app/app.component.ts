@@ -92,8 +92,8 @@ export class MyApp {
 	}
 
 	presentProfileModal() {
-		const profileModal = this.modalCtrl.create("IntroPage");
-		profileModal.present();
+		// const profileModal = this.modalCtrl.create("IntroPage");
+		// profileModal.present();
 	}
 
 	openPage(page) {

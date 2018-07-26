@@ -2,8 +2,9 @@
 	"home": {
 		"main_title": "ਮੁੱਖ ਪੰਨਾ"
 	},
-	"announcements_news": {
-		"main_title": "ਸੂਚਨਾਵਾਂ"
+	"news": {
+		"main_title": "ਸੂਚਨਾਵਾਂ",
+		"no_data": "Not available"
 	},
 	"post": { "main_title": "ਵੇਰਵੇ" },
 	"seed": {
@@ -19,11 +20,12 @@
 	"about": {
 		"main_title": "ਕੇ. ਵੀ. ਕੇ ਬਾਰੇ",
 		"h1": "ਕੇ. ਵੀ. ਕੇ ਬਾਰੇ",
-		"description":
-			"<p> ਗਰੲਗਕੲਕਡਜਾਡ ੲਕਡਹੋੲਡਹਲਦਡਬਾਾਹਡਾ</p>\n"
+		"description": "<p> ਗਰੲਗਕੲਕਡਜਾਡ ੲਕਡਹੋੲਡਹਲਦਡਬਾਾਹਡਾ</p>\n"
 	},
 	"contact": {
-		"main_title": "ਸੰਪਰਕ ਕਰੋ"
+		"main_title": "ਸੰਪਰਕ ਕਰੋ",
+		"contact_us": "Contact Us",
+		"here": "Here we are"
 	},
 	"faculty": {
 		"main_title": "ਸਟਾਫ਼",

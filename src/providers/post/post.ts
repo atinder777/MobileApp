@@ -44,6 +44,13 @@ export class PostProvider {
 	}
 
 	/**
+	 * @returns { Array } Returns the about page content.
+	 */
+	getContact() {
+		return this.http.get(`${URL_ENGLISH}/pages/?slug=contact`);
+	}
+
+	/**
 	 *
 	 * @param id
 	 * @description returns the post from a given post id.
