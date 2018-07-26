@@ -1,9 +1,6 @@
 <ion-content>
 
   <ion-grid no-padding>
-    <ion-list-header *ngIf="!news.data" header-section no-margin>
-      <h2 header-title text-capitalize>{{'news.no_data' | translate}}</h2>
-    </ion-list-header>
     <ion-row *ngIf="news.data">
       <ion-col col-12>
         <!-- Header List Big Image -->
@@ -11,6 +8,9 @@
           <h1 header-title text-capitalize>{{'news.main_title'| translate}}</h1>
         </ion-list-header>
         <ion-list no-margin>
+          <div *ngIf="!news.data" no-margin>
+            <h2 header-title text-capitalize>{{'news.no_data' | translate}}</h2>
+          </div>
           <ul no-margin no-padding>
             <li *ngFor="let post of news.data" (tap)="openPost(post)">
               <div>

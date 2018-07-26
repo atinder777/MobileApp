@@ -17,79 +17,94 @@ import { PostProvider } from "../../providers/post/post";
 })
 export class TrainingPage {
 	data: any = [];
+	tmp: any;
 
-	constructor(private navCtrl: Nav, private postProvider: PostProvider) {}
-
-	ionViewWillLoad() {
+	constructor(private navCtrl: Nav) {
 		let that = this;
-		let tmp = [
+		this.tmp = [
 			{
 				id: 58,
 				month: "April",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 65,
 				month: "May",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 72,
 				month: "June",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 79,
 				month: "July",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 86,
 				month: "August",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 93,
 				month: "September",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 100,
 				month: "October",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 107,
 				month: "November",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 114,
 				month: "December",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 37,
 				month: "January",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 44,
 				month: "February",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			},
 			{
 				id: 51,
 				month: "March",
-				animateClass: { "fade-in-left-item": false }
+				animateClass: { "fade-in-left-item": true }
 			}
 		];
 
-		tmp.forEach((val, i) => {
+		this.tmp.forEach((val, i) => {
+			this.tmp[i].animateClass = { "fade-in-left-item": false };
 			setTimeout(function() {
-				tmp[i].animateClass = { "fade-in-left-item": true };
-				that.data.push(tmp[i]);
-			}, 100 * i);
+				that.data.push(that.tmp[i]);
+				that.data[i].animateClass = { "fade-in-left-item": true };
+			}, 180 * i);
+		});
+	}
+
+	ionViewWillEnter() {
+		console.log(this.data);
+
+		let that = this;
+		let tmp = this.data;
+		this.data = [];
+		tmp.forEach((val, i) => {
+			tmp[i].animateClass = { "fade-in-left-item": false };
+			setTimeout(function() {
+				that.data.push(that.tmp[i]);
+				that.data[i].animateClass = { "fade-in-left-item": true };
+			}, 180 * i);
 		});
 	}
 

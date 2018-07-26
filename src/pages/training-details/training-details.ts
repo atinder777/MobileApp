@@ -53,7 +53,7 @@ export class TrainingDetailsPage {
 						animateClass: { "fade-in-left-item": true }
 					};
 					that.data.push(obj);
-				});
+				}, 200 * i);
 			});
 			this.loader.dismiss();
 		});

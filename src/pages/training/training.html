@@ -3,7 +3,7 @@
 		<h1 header-title text-capitalize>{{'training.main_title'| translate}}</h1>
 	</ion-list-header>
 	<ion-list no-margin *ngIf="data">
-		<ion-item [ngClass]="data.animateClass" border no-lines *ngFor="let item of data" (tap)="openTrainings(item.id)">
+		<ion-item [ngClass]="item.animateClass" border no-lines *ngFor="let item of data" (tap)="openTrainings(item.id)">
 			<span item-start>{{item.month}}</span>
 			<i icon-small item-end class="icon icon-calendar"></i>
 		</ion-item>
