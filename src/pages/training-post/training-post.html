@@ -1,0 +1,66 @@
+<!--
+  Generated template for the TrainingPostPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'training_post.main_title' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item no-lines background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + post.image + ')'}">
+    <div title-block>
+      <!--- Category -->
+      <!-- <span new-category *ngIf="category">{{category.name}}</span> -->
+      <!--- Parallax Title -->
+      <h1 parallax-title text-wrap [innerHTML]="post.title"></h1>
+    </div>
+  </ion-item>
+  <ion-item-group>
+    <ion-badge *ngIf="post.date" margin badge-light float-right [innerHTML]="post.date"></ion-badge>
+    <ion-item no-margin no-lines>
+      <!-- Content Title-->
+      <!-- <ion-row no-padding no-margin>
+        <h2 text-wrap parallax-subtitle margin-bottom [innerHTML]="post.title"></h2>
+      </ion-row> -->
+
+      <!-- Content Description-->
+      <ion-row>
+        <p>
+          <b>{{'training_post.discipline' | translate}}</b>:
+        </p>
+        <p text-wrap *ngIf="post.discipline" [innerHTML]="post.discipline"></p>
+      </ion-row>
+      <ion-row>
+        <p>
+          <b>{{'training_post.nature' | translate}}:</b>
+        </p>
+        <p text-wrap *ngIf="post.nature" [innerHTML]="post.nature"></p>
+      </ion-row>
+      <ion-row>
+        <p>
+          <b>{{'training_post.pnumber' | translate}}:</b>
+        </p>
+        <p text-wrap *ngIf="post.pnumber" [innerHTML]="post.pnumber"></p>
+      </ion-row>
+      <ion-row>
+        <p>
+          <b>{{'training_post.venue' | translate}}:</b>
+        </p>
+        <p text-wrap *ngIf="post.venue" [innerHTML]="post.venue"></p>
+      </ion-row>
+      <ion-row>
+        <p>
+          <b [innerHTML]="'training_post.agency' | translate"></b>:
+        </p>
+        <p text-wrap *ngIf="post.agency" [innerHTML]="post.agency"></p>
+      </ion-row>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

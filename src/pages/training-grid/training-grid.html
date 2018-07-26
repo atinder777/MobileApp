@@ -17,7 +17,7 @@
   <ion-grid *ngIf="data != null">
     <ion-row no-padding>
       <ion-col col-6 col-sm-3 col-md-6 col-lg-4 col-xl-3 *ngFor="let group of data;let i = index;">
-        <ion-card [ngClass]="group.animation" background-size (click)="openTrainingsDatails(group.id)" [ngStyle]="{'background-image': 'url(' + group.image + ')'}">
+        <ion-card [ngClass]="group.animation" background-size (click)="openTrainingsDatails(group.id, group.image)" [ngStyle]="{'background-image': 'url(' + group.image + ')'}">
           <div gallery-description>
             <h6 gallery-subtitle>{{group.title}}</h6>
           </div>

@@ -18,6 +18,7 @@ export class TrainingDetailsPage {
 	data: any = [];
 	loader: any;
 	postId: number;
+	image: any;
 
 	constructor(
 		public navCtrl: Nav,
@@ -26,6 +27,7 @@ export class TrainingDetailsPage {
 		private postProvider: PostProvider
 	) {
 		this.postId = this.navParams.get("id");
+		this.image = this.navParams.get("image");
 	}
 
 	ionViewDidLoad() {
@@ -54,6 +56,13 @@ export class TrainingDetailsPage {
 				});
 			});
 			this.loader.dismiss();
+		});
+	}
+
+	openTraining(post) {
+		post.image = this.image;
+		this.navCtrl.push("TrainingPostPage", {
+			post: post
 		});
 	}
 }

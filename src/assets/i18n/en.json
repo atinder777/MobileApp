@@ -56,5 +56,16 @@
 		"venue": "Venue",
 		"agency": "Organizing Agency",
 		"details": "Details"
+	},
+	"training_post": {
+		"main_title": "Training Details",
+		"header": "Training Details",
+		"discipline": "Discipline",
+		"date": "Date",
+		"nature": "Participant Nature",
+		"pnumber": "Participant No.",
+		"venue": "Venue",
+		"agency": "Organizing Agency",
+		"details": "Details"
 	}
 }

@@ -23,7 +23,7 @@
         </ion-list-header>
         <ion-list no-margin>
           <ul no-margin no-padding>
-            <li *ngFor="let group of data;" [ngClass]="group.animateClass">
+            <li *ngFor="let group of data;" [ngClass]="group.animateClass" (tap)="openTraining(group)">
               <div collapsible-header>
                 <ion-item border no-lines>
                   <h3 item-subtitle text-wrap>

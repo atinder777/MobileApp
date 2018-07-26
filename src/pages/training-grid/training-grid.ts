@@ -67,10 +67,11 @@ export class TrainingGridPage {
 		console.log("ionViewDidLoad TrainingGridPage");
 	}
 
-	openTrainingsDatails(id) {
-		console.log(id);
+	openTrainingsDatails(id, image) {
+		console.log(id, image);
 		this.navCtrl.push("TrainingDetailsPage", {
-			id: id
+			id: id,
+			image: image
 		});
 	}
 }
