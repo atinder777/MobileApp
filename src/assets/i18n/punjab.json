@@ -6,7 +6,14 @@
 		"main_title": "ਸੂਚਨਾਵਾਂ"
 	},
 	"post": { "main_title": "ਨਜਠਦ" },
-	"seed": { "main_title": "ਨਜਠਦਨਜਠਦ" },
+	"seed": {
+		"main_title": "ਉਪਲਬਧ ਬੀਜ",
+		"header": "ਉਪਲਬਧ ਬੀਜ",
+		"title": "ਨਜਠਦ",
+		"variety": "ਨਜਠਦ",
+		"packaging": "ਨਜਠਦ",
+		"price": "ਨਜਠਦ"
+	},
 	"events": { "main_title": "ਗਤੀਵਿਧੀਆਂ", "details": "ਨਜਠਦ", "read_more": "ਢਜਢਦਪ" },
 	"settings": { "main_title": "ਨਜਠਦ", "push": "ਨਜਠਦਫਦਢਜਢਦਪ", "language": "ਨਜਠਦਫਦਢਜਢਦਪ" },
 	"about": {
@@ -20,7 +27,9 @@
 	},
 	"faculty": {
 		"main_title": "ਨਜਠਦ",
-		"header": "ਨਜਠਦਨਜਠਦ"
+		"header": "ਨਜਠਦਨਜਠਦ",
+		"designation": "ਨਜਠਦਨਜਠਦ",
+		"discipline": "ਨਜਠਦਨਜਠਦ"
 	},
 	"more": {
 		"seed": "ਨਜਠਦ ਨਜਠਦਨਜਠਦ",

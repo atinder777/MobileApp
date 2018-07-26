@@ -50,7 +50,8 @@ export class FacultyPage {
 					animateClass: { "fade-in-left-item": true },
 					image: img,
 					title: val.title.rendered,
-					description: val.title.rendered,
+					designation: val.acf.designation,
+					discipline: val.acf.discipline,
 					expandItems: [
 						{
 							description: val.acf.contact,

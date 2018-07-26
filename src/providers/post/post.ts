@@ -30,6 +30,20 @@ export class PostProvider {
 	}
 
 	/**
+	 * @returns { Array } Returns an Array of seeds.
+	 */
+	getSeeds() {
+		return this.http.get(`${URL_ENGLISH}/seed`);
+	}
+
+	/**
+	 * @returns { Array } Returns the about page content.
+	 */
+	getAbout() {
+		return this.http.get(`${URL_ENGLISH}/pages/?slug=about`);
+	}
+
+	/**
 	 *
 	 * @param id
 	 * @description returns the post from a given post id.

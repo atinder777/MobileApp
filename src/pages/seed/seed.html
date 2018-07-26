@@ -1,12 +1,45 @@
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>{{'seed.main_title' | translate}}</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>{{'seed.main_title' | translate}}</ion-title>
+  </ion-navbar>
 
 </ion-header>
 <ion-content>
-    <div class="full-page">
-        <iframe allowfullscreen id="iframe" class="full-page" src="https://www.gitkraken.com/" frameborder="0"></iframe>
-    </div>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12>
+        <!-- Header List Big Image -->
+        <ion-list-header header-section no-margin>
+          <h1 header-title text-capitalize>{{'seed.header' | translate}}</h1>
+        </ion-list-header>
+        <ion-list no-margin>
+          <ul no-margin no-padding>
+            <li *ngFor="let group of data;" [ngClass]="group.animateClass">
+              <div collapsible-header>
+                <ion-item border no-lines>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'seed.title' | translate}}:</b>
+                    <span [innerHTML]="group.title"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'seed.variety'| translate}}:</b>
+                    <span [innerHTML]="group.variety"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'seed.packaging'| translate}}:</b>
+                    <span [innerHTML]="group.packaging"></span>
+                  </h3>
+                  <h3 item-subtitle text-wrap>
+                    <b>{{'seed.price'| translate}}:</b>
+                    <span [innerHTML]="group.price"></span>
+                  </h3>
+                </ion-item>
+              </div>
+            </li>
+          </ul>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

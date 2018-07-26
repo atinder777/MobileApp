@@ -35,7 +35,8 @@
                     <img [src]="group.image" alt="{{group.title}}" />
                   </ion-thumbnail>
                   <h2 item-title>{{group.title}}</h2>
-                  <h3 item-subtitle text-wrap>{{group.description}}</h3>
+                  <h3 item-subtitle text-wrap>{{'faculty.designation' | translate}}: {{group.designation}}</h3>
+                  <h3 item-subtitle text-wrap>{{'faculty.discipline'| translate}}: {{group.discipline}}</h3>
                 </ion-item>
               </div>
               <!-- End List big image Header -->

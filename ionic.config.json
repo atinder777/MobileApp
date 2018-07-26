@@ -1,8 +1,8 @@
 {
-  "name": "Ionic-3-Green-Light",
-  "app_id": "3fd41324",
-  "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
+	"name": "KVK-Pathankot",
+	"app_id": "com.kvkpathankot",
+	"type": "ionic-angular",
+	"integrations": {
+		"cordova": {}
+	}
 }

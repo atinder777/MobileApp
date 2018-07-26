@@ -11,7 +11,7 @@ export class MenuService {
 
 	getId = (): string => "menu";
 
-	getTitle = (): string => "Agristudy";
+	getTitle = (): string => "KVK Pathankot";
 
 	getAllThemes = (): Array<any> => {
 		return [
@@ -21,7 +21,7 @@ export class MenuService {
 				component: "HomePage"
 			},
 			{
-				title: "Faculty",
+				title: "Staff",
 				icon: "icon-library",
 				component: "FacultyPage"
 			},
@@ -45,10 +45,10 @@ export class MenuService {
 
 	getDataForTheme = () => {
 		return {
-			background: "assets/images/background/14.jpg",
-			image: "assets/images/logo/1.png",
-			title: "Ionic 3 theme iOS 11 style",
-			description: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt"
+			background: "assets/images/training_for_farmers.jpg",
+			image: "assets/images/app_icon.png",
+			title: "KVK Pathankot",
+			description: "Punjab Agricultural University"
 		};
 	};
 

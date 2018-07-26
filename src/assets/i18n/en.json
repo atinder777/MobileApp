@@ -6,7 +6,14 @@
 		"main_title": "Notices"
 	},
 	"post": { "main_title": "Post" },
-	"seed": { "main_title": "Seed Avaibility" },
+	"seed": {
+		"main_title": "Seed Avaibility",
+		"header": "Seed Avaibility",
+		"title": "Crop",
+		"variety": "Variety",
+		"packaging": "Packaging Size (Kg)",
+		"price": "Price per Kg (Rs.)"
+	},
 	"events": { "main_title": "Events", "details": "Details", "read_more": "Read More" },
 	"settings": { "main_title": "Settings", "push": "Push Notifications", "language": "Choose your language" },
 	"about": {
@@ -20,7 +27,9 @@
 	},
 	"faculty": {
 		"main_title": "Staff",
-		"header": "Staff"
+		"header": "Staff",
+		"designation": "Designation",
+		"discipline": "Discipline"
 	},
 	"more": {
 		"seed": "Seed Avaibility",
