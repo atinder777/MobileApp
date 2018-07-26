@@ -17,6 +17,7 @@ export class NewsPage {
 	imgPlaceholder: string = IMAGE_PLACEHOLDER;
 	animateClass: any;
 	loader: any;
+	showNoNews: boolean = false;
 
 	constructor(
 		public navCtrl: Nav,
@@ -28,6 +29,7 @@ export class NewsPage {
 	}
 
 	ionViewDidLoad() {
+		this.showNoNews = false;
 		let that = this;
 		this.loader = this.load.create({ content: "Loading..." });
 		this.loader.present();
@@ -41,32 +43,41 @@ export class NewsPage {
 
 		this.obs.subscribe(r => {
 			that.news.data = [];
-			for (let i = 0; i < r.length; i++) {
-				r[i].animateClass = { "fade-in-left-item": false };
-				setTimeout(function() {
-					console.log(that.news);
+			if (r.length == 0) {
+				this.showNoNews = true;
+			} else {
+				for (let i = 0; i < r.length; i++) {
+					r[i].animateClass = { "fade-in-left-item": false };
+					setTimeout(function() {
+						console.log(that.news);
 
-					that.news.data.push(r[i]);
-					that.news.data[i].animateClass = { "fade-in-left-item": true };
-				}, 200 * i);
+						that.news.data.push(r[i]);
+						that.news.data[i].animateClass = { "fade-in-left-item": true };
+					}, 200 * i);
+				}
 			}
 		});
 	}
 
 	ionViewWillEnter() {
+		this.showNoNews = false;
 		if (this.news.data) {
 			let that = this;
 			let tmp = this.news.data;
 			this.news.data = [];
 
-			for (let i = 0; i < tmp.length; i++) {
-				tmp[i].animateClass = { "fade-in-left-item": false };
-				setTimeout(function() {
-					console.log(that.news);
+			if (tmp.length == 0) {
+				this.showNoNews = true;
+			} else {
+				for (let i = 0; i < tmp.length; i++) {
+					tmp[i].animateClass = { "fade-in-left-item": false };
+					setTimeout(function() {
+						console.log(that.news);
 
-					that.news.data.push(tmp[i]);
-					that.news.data[i].animateClass = { "fade-in-left-item": true };
-				}, 200 * i);
+						that.news.data.push(tmp[i]);
+						that.news.data[i].animateClass = { "fade-in-left-item": true };
+					}, 200 * i);
+				}
 			}
 		}
 	}

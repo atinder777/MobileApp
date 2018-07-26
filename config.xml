@@ -122,7 +122,7 @@
     </platform>
     <plugin name="cordova-plugin-nativestorage" spec="^2.3.2" />
     <allow-navigation href="http://192.168.43.88:8100" />
+    <allow-navigation href="http://192.168.43.88:8101" />
     <engine name="ios" spec="4.5.1" />
     <engine name="android" spec="6.4.0" />
-    <allow-navigation href="http://192.168.43.88:8101" />
 </widget>

@@ -8,7 +8,7 @@
           <h1 header-title text-capitalize>{{'news.main_title'| translate}}</h1>
         </ion-list-header>
         <ion-list no-margin>
-          <div *ngIf="!news.data" no-margin>
+          <div *ngIf="showNoNews" no-margin>
             <h2 header-title text-capitalize>{{'news.no_data' | translate}}</h2>
           </div>
           <ul no-margin no-padding>

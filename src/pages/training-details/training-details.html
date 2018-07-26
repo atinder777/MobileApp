@@ -21,6 +21,8 @@
         <ion-list-header header-section no-margin>
           <h1 header-title text-capitalize>{{'training_details.header' | translate}}</h1>
         </ion-list-header>
+        <h2 *ngIf="showNoTrainings" item-subtitle text-wrap>
+          <br>{{'training_details.no_training' | translate}}</h2>
         <ion-list no-margin>
           <ul no-margin no-padding>
             <li *ngFor="let group of data;" [ngClass]="group.animateClass" (tap)="openTraining(group)">

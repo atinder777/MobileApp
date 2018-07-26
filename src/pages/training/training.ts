@@ -18,6 +18,7 @@ import { PostProvider } from "../../providers/post/post";
 export class TrainingPage {
 	data: any = [];
 	tmp: any;
+	showNoTrainings: boolean = false;
 
 	constructor(private navCtrl: Nav) {
 		let that = this;
@@ -94,6 +95,7 @@ export class TrainingPage {
 	}
 
 	ionViewWillEnter() {
+		this.showNoTrainings = false;
 		console.log(this.data);
 
 		let that = this;

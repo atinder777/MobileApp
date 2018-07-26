@@ -55,7 +55,8 @@
 		"pnumber": "Participant No.",
 		"venue": "Venue",
 		"agency": "Organizing Agency",
-		"details": "Details"
+		"details": "Details",
+		"no_training": "No Trainings Available"
 	},
 	"training_post": {
 		"main_title": "Training Details",

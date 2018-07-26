@@ -15,7 +15,11 @@
 		"packaging": "ਥੈਲੀ ਦਾ ਵਜ਼ਨ (ਕਿੱਲੋ)",
 		"price": "ਕੀਮਤ ਪ੍ਰਤੀ ਕਿੱਲੋ (ਰੂਪਏ)"
 	},
-	"events": { "main_title": "ਗਤੀਵਿਧੀਆਂ", "details": "ਵੇਰਵੇ", "read_more": "ਵਿਸਥਾਰ ਵੇਰਵੇ" },
+	"events": {
+		"main_title": "ਗਤੀਵਿਧੀਆਂ",
+		"details": "ਵੇਰਵੇ",
+		"read_more": "ਵਿਸਥਾਰ ਵੇਰਵੇ"
+	},
 	"settings": { "main_title": "ਸੈਟਿੰਗਾਂ", "push": "ਐਪ ਵੱਲੋਂ ਸੂਚਨਾਵਾਂ", "language": "ਭਾਸ਼ਾ ਚੁਣੋ" },
 	"about": {
 		"main_title": "ਕੇ. ਵੀ. ਕੇ ਬਾਰੇ",
@@ -55,7 +59,8 @@
 		"pnumber": "Participant No.",
 		"venue": "Venue",
 		"agency": "Organizing Agency",
-		"details": "Details"
+		"details": "Details",
+		"no_training": "No Trainings Available"
 	},
 	"training_post": {
 		"main_title": "Training Details",

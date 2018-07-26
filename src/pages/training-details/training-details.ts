@@ -19,6 +19,7 @@ export class TrainingDetailsPage {
 	loader: any;
 	postId: number;
 	image: any;
+	showNoTrainings: boolean = false;
 
 	constructor(
 		public navCtrl: Nav,
@@ -39,22 +40,27 @@ export class TrainingDetailsPage {
 			this.data = res;
 			tmp = this.data;
 			this.data = [];
-			tmp.forEach((val, i) => {
-				setTimeout(function() {
-					let obj = {
-						title: val.title.rendered,
-						agency: val.acf.agency,
-						date: val.acf.date,
-						details: val.acf.details,
-						discipline: val.acf.discipline,
-						nature: val.acf.nature,
-						pnumber: val.acf.pnumber,
-						venue: val.acf.venue,
-						animateClass: { "fade-in-left-item": true }
-					};
-					that.data.push(obj);
-				}, 200 * i);
-			});
+			if (tmp.length == 0) {
+				this.showNoTrainings = true;
+				console.log("No Trainings");
+			} else {
+				tmp.forEach((val, i) => {
+					setTimeout(function() {
+						let obj = {
+							title: val.title.rendered,
+							agency: val.acf.agency,
+							date: val.acf.date,
+							details: val.acf.details,
+							discipline: val.acf.discipline,
+							nature: val.acf.nature,
+							pnumber: val.acf.pnumber,
+							venue: val.acf.venue,
+							animateClass: { "fade-in-left-item": true }
+						};
+						that.data.push(obj);
+					}, 200 * i);
+				});
+			}
 			this.loader.dismiss();
 		});
 	}
