@@ -13,34 +13,98 @@ export class MenuService {
 
 	getTitle = (): string => "KVK Pathankot";
 
-	getAllThemes = (): Array<any> => {
-		return [
-			{
-				title: "Home",
-				icon: "icon-home",
-				component: "HomePage"
-			},
-			{
-				title: "Staff",
-				icon: "icon-library",
-				component: "FacultyPage"
-			},
-			{
-				title: "Contact",
-				icon: "icon-phone-in-talk",
-				component: "ContactPage"
-			},
-			{
-				title: "Settings",
-				icon: "icon-settings",
-				component: "SettingsPage"
-			},
-			{
-				title: "About",
-				icon: "icon-information-outline",
-				component: "AboutPage"
-			}
-		];
+	getAllThemes = (lang): Array<any> => {
+		if (lang == "en") {
+			return [
+				{
+					title: "Home",
+					icon: "icon-home",
+					component: "HomePage"
+				},
+				{
+					title: "Activities",
+					icon: "icon-calendar",
+					component: "EventsPage",
+					showMenu: true
+				},
+				{
+					title: "Training Schedule",
+					icon: "icon-clipboard",
+					component: "TrainingPage",
+					showMenu: true
+				},
+				{
+					title: "Seed Avaibility",
+					icon: "icon-leaf",
+					component: "SeedPage"
+				},
+				{
+					title: "Staff",
+					icon: "icon-library",
+					component: "FacultyPage"
+				},
+				{
+					title: "Contact",
+					icon: "icon-phone-in-talk",
+					component: "ContactPage"
+				},
+				{
+					title: "Settings",
+					icon: "icon-settings",
+					component: "SettingsPage"
+				},
+				{
+					title: "About",
+					icon: "icon-information-outline",
+					component: "AboutPage"
+				}
+			];
+		} else {
+			return [
+				{
+					title: "ਮੁੱਖ ਪੰਨਾ",
+					icon: "icon-home",
+					component: "HomePage"
+				},
+				{
+					title: "ਸੂਚਨਾਵਾਂ",
+					icon: "icon-calendar",
+					component: "EventsPage",
+					showMenu: true
+				},
+				{
+					title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ",
+					icon: "icon-clipboard",
+					component: "TrainingPage",
+					showMenu: true
+				},
+				{
+					title: "ਉਪਲਬਧ ਬੀਜ",
+					icon: "icon-leaf",
+					component: "SeedPage"
+				},
+				{
+					title: "ਸਟਾਫ਼",
+					icon: "icon-library",
+					component: "FacultyPage"
+				},
+				{
+					title: "ਸੰਪਰਕ",
+					icon: "icon-phone-in-talk",
+					component: "ContactPage"
+				},
+				{
+					title: "ਸੈਟਿੰਗਾਂ",
+					icon: "icon-settings",
+					component: "SettingsPage"
+				},
+				{
+					title: "ਕੇ. ਵੀ. ਕੇ. ਬਾਰੇ",
+					icon: "icon-information-outline",
+					component: "AboutPage"
+				}
+			];
+		}
 	};
 
 	getDataForTheme = () => {

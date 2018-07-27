@@ -49,8 +49,6 @@ export class NewsPage {
 				for (let i = 0; i < r.length; i++) {
 					r[i].animateClass = { "fade-in-left-item": false };
 					setTimeout(function() {
-						console.log(that.news);
-
 						that.news.data.push(r[i]);
 						that.news.data[i].animateClass = { "fade-in-left-item": true };
 					}, 200 * i);
@@ -72,8 +70,6 @@ export class NewsPage {
 				for (let i = 0; i < tmp.length; i++) {
 					tmp[i].animateClass = { "fade-in-left-item": false };
 					setTimeout(function() {
-						console.log(that.news);
-
 						that.news.data.push(tmp[i]);
 						that.news.data[i].animateClass = { "fade-in-left-item": true };
 					}, 200 * i);
@@ -94,8 +90,6 @@ export class NewsPage {
 		if (that.news.data && that.news.data) {
 			that.animateItems = [];
 			for (let i = 0; i < that.news.data.length; i++) {
-				console.log(i);
-
 				setTimeout(function() {
 					that.animateItems.push(that.news.items[i]);
 				}, 200 * i);

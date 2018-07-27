@@ -19,6 +19,5 @@
 
 <ion-content padding>
   <!-- <h1>{{'about.h1' | translate}}</h1> -->
-  <h1 *ngIf="data.id">{{data.title.rendered}}</h1>
   <div *ngIf="data.id" [innerHTML]="data.content.rendered"></div>
 </ion-content>

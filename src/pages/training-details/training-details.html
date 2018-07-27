@@ -28,34 +28,21 @@
             <li *ngFor="let group of data;" [ngClass]="group.animateClass" (tap)="openTraining(group)">
               <div collapsible-header>
                 <ion-item border no-lines>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.discipline' | translate}}:</b>
-                    <span [innerHTML]="group.discipline"></span>
-                  </h3>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.date' | translate}}:</b>
-                    <span [innerHTML]="group.date"></span>
-                  </h3>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.nature'| translate}}:</b>
-                    <span [innerHTML]="group.nature"></span>
-                  </h3>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.pnumber'| translate}}:</b>
-                    <span [innerHTML]="group.pnumber"></span>
-                  </h3>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.venue'| translate}}:</b>
-                    <span [innerHTML]="group.venue"></span>
-                  </h3>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.agency'| translate}}:</b>
-                    <span [innerHTML]="group.agency"></span>
-                  </h3>
-                  <h3 item-subtitle text-wrap>
-                    <b>{{'training_details.details'| translate}}:</b>
-                    <span [innerHTML]="group.details"></span>
-                  </h3>
+                  <ion-row no-padding no-margin>
+                    <ion-col no-padding no-margin>
+                      <h3 class="margin-top15" item-subtitle text-wrap>
+                        <span [innerHTML]="group.discipline"></span>
+                      </h3>
+                    </ion-col>
+                    <ion-col no-padding no-margin>
+                      <ion-badge *ngIf="group.date" badge-light item-end [innerHTML]="group.date"></ion-badge>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row no-padding no-margin>
+                    <ion-col no-padding no-margin>
+                      <h2 text-wrap [innerHTML]="group.title"></h2>
+                    </ion-col>
+                  </ion-row>
                 </ion-item>
               </div>
             </li>

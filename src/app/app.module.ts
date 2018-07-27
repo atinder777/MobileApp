@@ -20,7 +20,7 @@ import { OneSignal } from "@ionic-native/onesignal";
 import { TranslateModule, TranslateLoader, TranslatePipe } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { PushProvider } from '../providers/push/push';
+import { PushProvider } from "../providers/push/push";
 
 @NgModule({
 	declarations: [MyApp],
@@ -53,7 +53,7 @@ import { PushProvider } from '../providers/push/push';
 		GoogleAnalytics,
 		{ provide: ErrorHandler, useClass: IonicErrorHandler },
 		PostProvider,
-    PushProvider
+		PushProvider
 	]
 })
 export class AppModule {}

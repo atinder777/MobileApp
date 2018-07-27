@@ -1,3 +1,14 @@
+<ion-header *ngIf="showMenu">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon class="icon-menu" name="menu"></ion-icon>
+    </button>
+
+    <ion-navbar>
+      <ion-title>{{'events.main_title' | translate}}</ion-title>
+    </ion-navbar>
+  </ion-navbar>
+</ion-header>
 <ion-content padding>
   <ion-grid no-padding *ngIf="events.data != null">
     <ion-row>
@@ -14,8 +25,8 @@
                   <h2 ion-text text-wrap text-capitalize item-subtitle *ngIf="post.title" [innerHTML]="post.title.rendered"></h2>
                   <!-- Icon And Text For Read More-->
                   <div read-more>
-                    <ion-icon icon-medium float-left name="ios-arrow-dropright"></ion-icon>
-                    <span span-medium>{{'events.details' | translate}}</span>
+                    <ion-icon style="color: white" icon-medium float-left name="ios-arrow-dropright"></ion-icon>
+                    <span style="color: white" span-medium>{{'events.details' | translate}}</span>
                   </div>
                 </ion-item>
               </div>

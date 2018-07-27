@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { NativeStorage } from "@ionic-native/native-storage";
 import { TranslateService } from "../../../node_modules/@ngx-translate/core";
 import { PushProvider } from "../../providers/push/push";
+import { MyApp } from "../../app/app.component";
+import { HomePage } from "../home/home";
 
 /**
  * Generated class for the SettingsPage page.
@@ -26,7 +28,8 @@ export class SettingsPage {
 		public navParams: NavParams,
 		private storage: NativeStorage,
 		private translate: TranslateService,
-		private pushProvider: PushProvider
+		private pushProvider: PushProvider,
+		private myApp: MyApp
 	) {
 		this.data = {}; //initializes the array.
 		this.storage.getItem("push").then(res => {
@@ -76,9 +79,11 @@ export class SettingsPage {
 	}
 
 	onLanguageSelect() {
-		this.storage.setItem("lang", this.lang);
-		this.translate.use(this.lang);
-		console.log(this.lang);
+		this.storage.setItem("lang", this.lang).then(res => {
+			this.myApp.initializeApp();
+			this.translate.use(this.lang);
+			console.log(this.lang);
+		});
 	}
 
 	ionViewDidLoad() {

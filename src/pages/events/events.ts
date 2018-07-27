@@ -19,12 +19,16 @@ export class EventsPage {
 	events: any = {};
 	loader: any;
 	tmpArray: any = [];
+	showMenu: boolean;
+
 	constructor(
 		public navCtrl: Nav,
 		public navParams: NavParams,
 		private postProvider: PostProvider,
 		private load: LoadingController
-	) {}
+	) {
+		this.showMenu = navParams.get("showMenu");
+	}
 
 	ionViewWillLoad() {
 		let that = this;

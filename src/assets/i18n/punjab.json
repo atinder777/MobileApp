@@ -23,8 +23,7 @@
 	"settings": { "main_title": "ਸੈਟਿੰਗਾਂ", "push": "ਐਪ ਵੱਲੋਂ ਸੂਚਨਾਵਾਂ", "language": "ਭਾਸ਼ਾ ਚੁਣੋ" },
 	"about": {
 		"main_title": "ਕੇ. ਵੀ. ਕੇ ਬਾਰੇ",
-		"h1": "ਕੇ. ਵੀ. ਕੇ ਬਾਰੇ",
-		"description": "<p> ਗਰੲਗਕੲਕਡਜਾਡ ੲਕਡਹੋੲਡਹਲਦਡਬਾਾਹਡਾ</p>\n"
+		"h1": "ਕੇ. ਵੀ. ਕੇ ਬਾਰੇ"
 	},
 	"contact": {
 		"main_title": "ਸੰਪਰਕ ਕਰੋ",
@@ -48,29 +47,28 @@
 		"main_title": "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ"
 	},
 	"training_grid": {
-		"main_title": "Trainings"
+		"main_title": "ਸਿਖਲਾਈ"
 	},
 	"training_details": {
-		"main_title": "Training Details",
-		"header": "Training Details",
-		"discipline": "Discipline",
-		"date": "Date",
-		"nature": "Participant Nature",
-		"pnumber": "Participant No.",
-		"venue": "Venue",
-		"agency": "Organizing Agency",
-		"details": "Details",
-		"no_training": "No Trainings Available"
+		"main_title": "ਸਿਖਲਾਈ ਦੇ ਵੇਰਵੇ",
+		"header": "ਸਿਖਲਾਈ ਦੇ ਵੇਰਵੇ",
+		"discipline": "ਵਿਸ਼ਾ",
+		"date": "ਤਾਰੀਖ",
+		"nature": "ਕਿਸ ਲਈ ਢੁਕਵਾਂ",
+		"pnumber": "ਸਹਿਭਾਗੀਆਂ ਦੀ ਗਿਣਤੀ",
+		"venue": "ਸਥਾਨ",
+		"agency": "ਪ੍ਰਬੰਧ",
+		"details": "ਵੇਰਵੇ"
 	},
 	"training_post": {
-		"main_title": "Training Details",
-		"header": "Training Details",
-		"discipline": "Discipline",
-		"date": "Date",
-		"nature": "Participant Nature",
-		"pnumber": "Participant No.",
-		"venue": "Venue",
-		"agency": "Organizing Agency",
-		"details": "Details"
+		"main_title": "ਸਿਖਲਾਈ ਦੇ ਵੇਰਵੇ",
+		"header": "ਸਿਖਲਾਈ ਦੇ ਵੇਰਵੇ",
+		"discipline": "ਵਿਸ਼ਾ",
+		"date": "ਤਾਰੀਖ",
+		"nature": "ਕਿਸ ਲਈ ਢੁਕਵਾਂ",
+		"pnumber": "ਸਹਿਭਾਗੀਆਂ ਦੀ ਗਿਣਤੀ",
+		"venue": "ਸਥਾਨ",
+		"agency": "ਪ੍ਰਬੰਧ",
+		"details": "ਵੇਰਵੇ"
 	}
 }

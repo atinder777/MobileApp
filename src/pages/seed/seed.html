@@ -1,9 +1,13 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>{{'seed.main_title' | translate}}</ion-title>
-  </ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon class="icon-menu" name="menu"></ion-icon>
+    </button>
 
+    <ion-navbar>
+      <ion-title>{{'seed.main_title' | translate}}</ion-title>
+    </ion-navbar>
+  </ion-navbar>
 </ion-header>
 <ion-content>
   <ion-grid no-padding *ngIf="data != null">

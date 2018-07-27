@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from "ionic-an
 import { CallNumber } from "@ionic-native/call-number";
 import { EmailComposer } from "@ionic-native/email-composer";
 import { PostProvider } from "../../providers/post/post";
-import { IMAGE_PLACEHOLDER } from "../../consts/main";
+import { STAFF_PLACEHOLDER } from "../../consts/main";
 
 /**
  * Generated class for the FacultyPage page.
@@ -42,7 +42,7 @@ export class FacultyPage {
 			this.tmpArray.data.forEach((val, i) => {
 				let img;
 				if (val.better_featured_image === null) {
-					img = IMAGE_PLACEHOLDER;
+					img = STAFF_PLACEHOLDER;
 				} else {
 					img = val.better_featured_image.source_url;
 				}

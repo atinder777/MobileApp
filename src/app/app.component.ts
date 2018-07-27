@@ -37,7 +37,6 @@ export class MyApp {
 	) {
 		this.initializeApp();
 
-		this.pages = menuService.getAllThemes();
 		this.leftMenuTitle = menuService.getTitle();
 
 		this.menuService.load(null).subscribe(snapshot => {
@@ -45,7 +44,7 @@ export class MyApp {
 		});
 	}
 
-	initializeApp() {
+	public initializeApp() {
 		this.platform.ready().then(() => {
 			// Okay, so the platform is ready and our plugins are available.
 			// Here you can do any higher level native things you might need.
@@ -72,6 +71,7 @@ export class MyApp {
 			);
 			this.storage.getItem("lang").then(
 				res => {
+					this.pages = this.menuService.getAllThemes(res);
 					console.log(res);
 
 					this.translate.setDefaultLang(res);
@@ -80,6 +80,7 @@ export class MyApp {
 					console.log(err);
 
 					if (err.code == 2) {
+						this.pages = this.menuService.getAllThemes("en");
 						this.translate.setDefaultLang("en");
 						this.alertCtrl
 							.create({
@@ -118,19 +119,16 @@ export class MyApp {
 	}
 
 	openPage(page) {
-		// close the menu when clicking a link from the menu
-		// navigate to the new page if it is not the current page
-		// if (page.singlePage) {
-		// 	this.menu.open();
-		// 	this.nav.push(this.getPageForOpen(page.component), {
-		// 		service: this.getServiceForPage(page.component),
-		// 		page: page.component
-		// 	});
-		// } else {
-		// }
-		this.nav.setRoot(page.component, {
-			componentName: page.component
-		});
+		if (page.showMenu) {
+			this.nav.setRoot(page.component, {
+				componentName: page.component,
+				showMenu: page.showMenu
+			});
+		} else {
+			this.nav.setRoot(page.component, {
+				componentName: page.component
+			});
+		}
 	}
 
 	getPageForOpen(value: string): any {

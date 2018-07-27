@@ -61,6 +61,9 @@
         </p>
         <p text-wrap *ngIf="post.agency" [innerHTML]="post.agency"></p>
       </ion-row>
+      <ion-row>
+        <p [innerHTML]="post.details"></p>
+      </ion-row>
     </ion-item>
   </ion-item-group>
 </ion-content>

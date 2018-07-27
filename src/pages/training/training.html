@@ -1,3 +1,14 @@
+<ion-header *ngIf="showMenu">
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon class="icon-menu" name="menu"></ion-icon>
+		</button>
+
+		<ion-navbar>
+			<ion-title>{{'training.main_title' | translate}}</ion-title>
+		</ion-navbar>
+	</ion-navbar>
+</ion-header>
 <ion-content>
 	<ion-list-header header-section no-margin>
 		<h1 header-title text-capitalize>{{'training.main_title'| translate}}</h1>

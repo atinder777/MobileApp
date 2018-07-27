@@ -11,25 +11,19 @@ import { OneSignal } from "@ionic-native/onesignal";
 @Injectable()
 export class PushProvider {
 	constructor(public http: HttpClient, private oneSignal: OneSignal) {
-		this.oneSignal.startInit("0ac8f21c-3eb5-4d3c-8fed-ecbfa8684da7", "305224545996");
-
+		this.oneSignal.startInit("20cba525-2645-45f3-93f2-c4f5ee8d2310", "777551882937");
 		this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
-
 		this.oneSignal.handleNotificationReceived().subscribe(res => {
 			// do something when notification is received
 		});
-
 		this.oneSignal.handleNotificationOpened().subscribe(() => {
 			// do something when a notification is opened
 		});
-
 		this.oneSignal.endInit();
 	}
-
 	enablePush() {
 		this.oneSignal.setSubscription(true);
 	}
-
 	disablePush() {
 		this.oneSignal.setSubscription(false);
 	}

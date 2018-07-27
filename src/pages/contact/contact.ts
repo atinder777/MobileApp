@@ -33,27 +33,48 @@ export class ContactPage {
 		this.postProvider.getContact().subscribe(res => {
 			this.loader.dismiss();
 			let tmp = res;
-
-			this.params.data = {
-				contentTitle: "About us",
-				email: tmp[0].acf.email,
-				location:
-					"Krishi Vigyan Kendra, Pathankot,\n" +
-					"Shahpur Kandi Road, Village Gho, Tehsil & District Pathankot\n" +
-					"145023",
-				icon: "checkmark-circle",
-				map: {
-					lat: 32.32587,
-					lng: 75.663175,
-					mapTypeControl: true,
-					streetViewControl: true,
-					zoom: 15
-				},
-				phone: tmp[0].acf.contact,
-				title: "Contact Us",
-				titleMap: "Here we are :",
-				webSite: "https://www.kvkpathankot.com"
-			};
+			this.storage.getItem("lang").then(res => {
+				if (res == "en") {
+					this.params.data = {
+						contentTitle: "About us",
+						email: tmp[0].acf.email,
+						location:
+							"Krishi Vigyan Kendra, Pathankot,\n" +
+							"Shahpur Kandi Road, Village Gho, Tehsil & District Pathankot\n" +
+							"145023",
+						icon: "checkmark-circle",
+						map: {
+							lat: 32.32587,
+							lng: 75.663175,
+							mapTypeControl: true,
+							streetViewControl: true,
+							zoom: 15
+						},
+						phone: tmp[0].acf.contact,
+						title: "Contact Us",
+						titleMap: "Here we are :",
+						webSite: "https://www.kvkpathankot.com"
+					};
+				} else {
+					this.params.data = {
+						contentTitle: "About us",
+						email: tmp[0].acf.email,
+						location: "ਕ੍ਰਿਸ਼ੀ ਵਿਗਿਆਨ ਕੇਂਦਰ, ਪਠਾਨਕੋਟ, ਸ਼ਾਹਪੁਰ ਕੰਢੀ ਰੋਡ, ਪਿੰਡ ਘੋਹ, ਤਹਿਸੀਲ ਅਤੇ ਜਿਲ੍ਹਾ ਪਠਾਨਕੋਟ, 145023",
+						icon: "checkmark-circle",
+						map: {
+							lat: 32.32587,
+							lng: 75.663175,
+							mapTypeControl: true,
+							streetViewControl: true,
+							zoom: 15
+						},
+						phone: tmp[0].acf.contact,
+						title: "ਸੰਪਰਕ ਕਰੋ",
+						titleMap: "ਪਤਾ:",
+						webSite: "https://www.kvkpathankot.com"
+					};
+				}
+			});
 		});
 	}
 

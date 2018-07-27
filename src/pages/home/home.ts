@@ -16,20 +16,34 @@ export class HomePage {
 	params: any = {};
 	// obs:Observable<string>
 
-	constructor(public navCtrl: NavController, public service: HomeService, private translate: TranslateService) {
-		this.params.data = [
-			{ page: "NewsPage", icon: "ios-information-circle", title: "Notices" },
-			{ page: "EventsPage", icon: "ios-calendar", title: "Activities" },
-			{ page: "TrainingPage", icon: "ios-clipboard", title: "Training Schedule" },
-			{ page: "MorePage", icon: "ios-more", title: "More" }
-		];
-		// //Change to punjab here
-		// this.params.data = [
-		// 	{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
-		// 	{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
-		// 	{ page: "TrainingPage", icon: "ios-clipboard", title: "ਨਜਠਦ" },
-		// 	{ page: "MorePage", icon: "ios-more", title: "ਨਜ" }
-		// ]; // End changes to punjab.
+	constructor(
+		public navCtrl: NavController,
+		public service: HomeService,
+		private translate: TranslateService,
+		private storage: NativeStorage
+	) {
+		this.storage.getItem("lang").then(
+			res => {
+				if (res == "en") {
+					this.params.data = [
+						{ page: "NewsPage", icon: "ios-information-circle", title: "Notices" },
+						{ page: "EventsPage", icon: "ios-calendar", title: "Activities" },
+						{ page: "TrainingPage", icon: "ios-clipboard", title: "Training Schedule" },
+						{ page: "MorePage", icon: "ios-more", title: "More" }
+					];
+				} else {
+					this.params.data = [
+						{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
+						{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
+						{ page: "TrainingPage", icon: "ios-clipboard", title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ" },
+						{ page: "MorePage", icon: "ios-more", title: "ਉਪਲਬਧ ਬੀਜ" }
+					];
+				}
+			},
+			err => {
+				console.log(err);
+			}
+		);
 
 		this.params.events = {
 			onItemClick: function(item: any) {
