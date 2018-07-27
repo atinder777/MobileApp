@@ -14,11 +14,13 @@ import { PostProvider } from "../providers/post/post";
 import { CallNumber } from "@ionic-native/call-number";
 import { EmailComposer } from "@ionic-native/email-composer";
 import { NativeStorage } from "@ionic-native/native-storage";
+import { OneSignal } from "@ionic-native/onesignal";
 
 // import ngx-translate and the http loader
 import { TranslateModule, TranslateLoader, TranslatePipe } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { PushProvider } from '../providers/push/push';
 
 @NgModule({
 	declarations: [MyApp],
@@ -39,6 +41,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 	entryComponents: [MyApp],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	providers: [
+		OneSignal,
 		NativeStorage,
 		EmailComposer,
 		CallNumber,
@@ -49,7 +52,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 		LoadingService,
 		GoogleAnalytics,
 		{ provide: ErrorHandler, useClass: IonicErrorHandler },
-		PostProvider
+		PostProvider,
+    PushProvider
 	]
 })
 export class AppModule {}

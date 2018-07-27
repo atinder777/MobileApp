@@ -9,6 +9,7 @@ import { IService } from "../services/IService";
 
 import { TranslateService } from "@ngx-translate/core";
 import { NativeStorage } from "../../node_modules/@ionic-native/native-storage";
+import { PushProvider } from "../providers/push/push";
 
 @Component({
 	templateUrl: "app.html",
@@ -31,7 +32,8 @@ export class MyApp {
 		public modalCtrl: ModalController,
 		private translate: TranslateService,
 		private storage: NativeStorage,
-		private alertCtrl: AlertController
+		private alertCtrl: AlertController,
+		private pushProvider: PushProvider
 	) {
 		this.initializeApp();
 
@@ -49,6 +51,21 @@ export class MyApp {
 			// Here you can do any higher level native things you might need.
 			this.statusBar.styleDefault();
 			this.splashScreen.hide();
+			this.storage.getItem("push").then(
+				res => {
+					if (res) {
+						this.pushProvider.enablePush();
+					} else {
+						this.pushProvider.disablePush();
+					}
+				},
+				err => {
+					if ((err.code = 2)) {
+						this.storage.setItem("push", true);
+						this.pushProvider.enablePush();
+					}
+				}
+			);
 			this.storage.getItem("lang").then(
 				res => {
 					console.log(res);
