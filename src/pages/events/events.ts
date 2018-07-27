@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams, LoadingController, Nav } from "ionic-angular";
 import { PostProvider } from "../../providers/post/post";
-import { IMAGE_PLACEHOLDER } from "../../consts/main";
+import { EVENTS_PLACEHOLDER } from "../../consts/main";
 
 /**
  * Generated class for the EventsPage page.
@@ -32,14 +32,14 @@ export class EventsPage {
 
 	ionViewWillLoad() {
 		let that = this;
-		this.loader = this.load.create({ content: "Loading..." });
+		this.loader = this.load.create({ content: "Loading...", duration: 30000 });
 		this.loader.present();
 		this.postProvider.getActivities().subscribe(res => {
 			this.events.data = [];
 			this.tmpArray.data = res;
 			this.tmpArray.data.forEach((val, index) => {
 				if (this.tmpArray.data[index].better_featured_image === null) {
-					this.tmpArray.data[index].backgroudImage = IMAGE_PLACEHOLDER;
+					this.tmpArray.data[index].backgroudImage = EVENTS_PLACEHOLDER;
 				} else {
 					this.tmpArray.data[index].backgroudImage = this.tmpArray.data[index].better_featured_image.source_url;
 				}

@@ -31,7 +31,7 @@ export class FacultyPage {
 	) {}
 
 	ionViewDidLoad() {
-		this.load = this.loadController.create({ content: "Loading..." });
+		this.load = this.loadController.create({ content: "Loading...", duration: 30000 });
 		this.load.present();
 		let that = this;
 		this.data.items = [];

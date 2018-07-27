@@ -31,7 +31,7 @@ export class NewsPage {
 	ionViewDidLoad() {
 		this.showNoNews = false;
 		let that = this;
-		this.loader = this.load.create({ content: "Loading..." });
+		this.loader = this.load.create({ content: "Loading...", duration: 30000 });
 		this.loader.present();
 
 		this.obs = Observable.create(obs => {

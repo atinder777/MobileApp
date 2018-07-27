@@ -25,22 +25,15 @@ export class HomePage {
 		this.storage.getItem("lang").then(
 			res => {
 				if (res == "en") {
-					this.params.data = [
-						{ page: "NewsPage", icon: "ios-information-circle", title: "Notices" },
-						{ page: "EventsPage", icon: "ios-calendar", title: "Activities" },
-						{ page: "TrainingPage", icon: "ios-clipboard", title: "Training Schedule" },
-						{ page: "MorePage", icon: "ios-more", title: "More" }
-					];
+					this.setEnglish();
 				} else {
-					this.params.data = [
-						{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
-						{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
-						{ page: "TrainingPage", icon: "ios-clipboard", title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ" },
-						{ page: "MorePage", icon: "ios-more", title: "ਉਪਲਬਧ ਬੀਜ" }
-					];
+					this.setPunjabi();
 				}
 			},
 			err => {
+				if (err.code == 2) {
+					this.setEnglish();
+				}
 				console.log(err);
 			}
 		);
@@ -50,5 +43,23 @@ export class HomePage {
 				console.log("onItemClick");
 			}
 		};
+	}
+
+	setEnglish() {
+		this.params.data = [
+			{ page: "NewsPage", icon: "ios-information-circle", title: "Notices" },
+			{ page: "EventsPage", icon: "ios-calendar", title: "Activities" },
+			{ page: "TrainingPage", icon: "ios-clipboard", title: "Training Schedule" },
+			{ page: "MorePage", icon: "ios-more", title: "More" }
+		];
+	}
+
+	setPunjabi() {
+		this.params.data = [
+			{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
+			{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
+			{ page: "TrainingPage", icon: "ios-clipboard", title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ" },
+			{ page: "MorePage", icon: "ios-more", title: "ਉਪਲਬਧ ਬੀਜ" }
+		];
 	}
 }

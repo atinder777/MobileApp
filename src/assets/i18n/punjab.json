@@ -58,7 +58,8 @@
 		"pnumber": "ਸਹਿਭਾਗੀਆਂ ਦੀ ਗਿਣਤੀ",
 		"venue": "ਸਥਾਨ",
 		"agency": "ਪ੍ਰਬੰਧ",
-		"details": "ਵੇਰਵੇ"
+		"details": "ਵੇਰਵੇ",
+		"no_training": "No Trainings Available"
 	},
 	"training_post": {
 		"main_title": "ਸਿਖਲਾਈ ਦੇ ਵੇਰਵੇ",

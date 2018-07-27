@@ -26,7 +26,7 @@ export class AboutPage {
 	) {}
 
 	ionViewDidLoad() {
-		this.loader = this.loadingController.create({ content: "Loading..." });
+		this.loader = this.loadingController.create({ content: "Loading...", duration: 30000 });
 		this.loader.present();
 		this.postProvider.getAbout().subscribe(res => {
 			this.loader.dismiss();

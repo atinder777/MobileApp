@@ -26,7 +26,7 @@ export class ContactPage {
 		private postProvider: PostProvider,
 		private loading: LoadingController
 	) {
-		this.loader = this.loading.create({ content: "Loading..." });
+		this.loader = this.loading.create({ content: "Loading...", duration: 30000 });
 		this.loader.present();
 
 		this.animateClass = { "fade-in-left-item": true };

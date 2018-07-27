@@ -32,7 +32,7 @@ export class TrainingDetailsPage {
 	}
 
 	ionViewDidLoad() {
-		this.loader = this.loadingController.create({ content: "Loading..." });
+		this.loader = this.loadingController.create({ content: "Loading...", duration: 30000 });
 		this.loader.present();
 		let that = this;
 		let tmp = [];

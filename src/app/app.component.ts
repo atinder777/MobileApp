@@ -47,6 +47,18 @@ export class MyApp {
 	public initializeApp() {
 		this.platform.ready().then(() => {
 			// Okay, so the platform is ready and our plugins are available.
+			// Here you can do any higher level native things you might need
+
+			this.platform.registerBackButtonAction(() => {
+				if (this.menu.isOpen()) {
+					this.menu.close();
+				} else if (this.nav.canGoBack()) {
+					this.nav.pop();
+				} else {
+					//don't do anything
+				}
+			});
+			// Okay, so the platform is ready and our plugins are available.
 			// Here you can do any higher level native things you might need.
 			this.statusBar.styleDefault();
 			this.splashScreen.hide();
@@ -90,6 +102,8 @@ export class MyApp {
 									{
 										text: "English",
 										handler: () => {
+											this.initializeApp();
+											this.nav.setRoot("HomePage");
 											this.translate.setDefaultLang("en");
 											this.storage.setItem("lang", "en");
 										}
@@ -98,6 +112,8 @@ export class MyApp {
 										/////////////////////////
 										text: "ਪੰਜਾਬੀ", // Change to Punjab here
 										handler: () => {
+											this.initializeApp();
+											this.nav.setRoot("HomePage");
 											this.translate.setDefaultLang("punjab");
 											this.storage.setItem("lang", "punjab");
 										}

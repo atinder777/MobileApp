@@ -26,7 +26,7 @@ export class SeedPage {
 	) {}
 
 	ionViewDidLoad() {
-		this.loader = this.loadController.create({ content: "Loading..." });
+		this.loader = this.loadController.create({ content: "Loading...", duration: 30000 });
 		this.loader.present();
 		let that = this;
 		this.postProvider.getSeeds().subscribe(res => {
