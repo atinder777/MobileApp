@@ -53,7 +53,7 @@ export class MyApp {
 			this.splashScreen.hide();
 			this.storage.getItem("push").then(
 				res => {
-					if (res) {
+					if (res.isChecked) {
 						this.pushProvider.enablePush();
 					} else {
 						this.pushProvider.disablePush();
@@ -61,7 +61,11 @@ export class MyApp {
 				},
 				err => {
 					if ((err.code = 2)) {
-						this.storage.setItem("push", true);
+						this.storage.setItem("push", {
+							id: 1,
+							type: "push",
+							isChecked: true
+						});
 						this.pushProvider.enablePush();
 					}
 				}

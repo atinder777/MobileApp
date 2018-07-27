@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { NativeStorage } from "@ionic-native/native-storage";
 import { TranslateService } from "../../../node_modules/@ngx-translate/core";
+import { PushProvider } from "../../providers/push/push";
 
 /**
  * Generated class for the SettingsPage page.
@@ -24,30 +25,13 @@ export class SettingsPage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private storage: NativeStorage,
-		private translate: TranslateService
+		private translate: TranslateService,
+		private pushProvider: PushProvider
 	) {
-		this.data.items = []; //initializes the array.
-		this.storage.getItem("push").then(
-			res => {
-				this.data.items.push(res);
-			},
-			err => {
-				if (err.code == 2) {
-					this.data.items = [
-						{
-							id: 1,
-							type: "push",
-							isChecked: false
-						}
-					];
-					this.storage.setItem("push", {
-						id: 1,
-						type: "push",
-						isChecked: false
-					});
-				}
-			}
-		);
+		this.data = {}; //initializes the array.
+		this.storage.getItem("push").then(res => {
+			this.data = res;
+		});
 
 		this.dataLang.data = [
 			{
@@ -77,9 +61,16 @@ export class SettingsPage {
 	}
 
 	onEvent(item) {
+		console.log(item);
+
 		item.isChecked = !item.isChecked;
 		if (item.type == "push") {
 			console.log("push type");
+			if (item.isChecked) {
+				this.pushProvider.enablePush();
+			} else {
+				this.pushProvider.disablePush();
+			}
 			this.storage.setItem("push", item);
 		}
 	}
