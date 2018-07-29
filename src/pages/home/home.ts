@@ -32,6 +32,10 @@ export class HomePage {
 			this.nav.push("PostPage", { post: post });
 		});
 
+		this.event.subscribe("push:handleSeed", post => {
+			this.nav.push("SeedPage");
+		});
+
 		this.storage.getItem("lang").then(
 			res => {
 				if (res == "en") {
