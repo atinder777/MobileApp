@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController } from "ionic-angular";
+import { IonicPage, NavController, Nav, Events } from "ionic-angular";
 import { HomeService } from "../../services/home-service";
 import { NativeStorage } from "../../../node_modules/@ionic-native/native-storage";
 import { TranslateService } from "../../../node_modules/@ngx-translate/core";
 import { Observable } from "rxjs/observable";
+import { OneSignal } from "../../../node_modules/@ionic-native/onesignal";
 
 @IonicPage()
 @Component({
@@ -20,8 +21,17 @@ export class HomePage {
 		public navCtrl: NavController,
 		public service: HomeService,
 		private translate: TranslateService,
-		private storage: NativeStorage
+		private storage: NativeStorage,
+		private oneSignal: OneSignal,
+		private nav: Nav,
+		private event: Events
 	) {
+		this.event.subscribe("push:handle", post => {
+			console.log(post);
+
+			this.nav.push("PostPage", { post: post });
+		});
+
 		this.storage.getItem("lang").then(
 			res => {
 				if (res == "en") {

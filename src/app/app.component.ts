@@ -1,5 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
-import { Platform, MenuController, Nav, ModalController, AlertController } from "ionic-angular";
+import { Component, ViewChild, Injector } from "@angular/core";
+import { Platform, MenuController, Nav, ModalController, AlertController, App } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 
@@ -10,6 +10,7 @@ import { IService } from "../services/IService";
 import { TranslateService } from "@ngx-translate/core";
 import { NativeStorage } from "../../node_modules/@ionic-native/native-storage";
 import { PushProvider } from "../providers/push/push";
+import { OneSignal } from "../../node_modules/@ionic-native/onesignal";
 
 @Component({
 	templateUrl: "app.html",
@@ -33,7 +34,10 @@ export class MyApp {
 		private translate: TranslateService,
 		private storage: NativeStorage,
 		private alertCtrl: AlertController,
-		private pushProvider: PushProvider
+		private pushProvider: PushProvider,
+		private oneSignal: OneSignal,
+		private app: App,
+		protected injector: Injector
 	) {
 		this.initializeApp();
 
@@ -42,6 +46,10 @@ export class MyApp {
 		this.menuService.load(null).subscribe(snapshot => {
 			this.params = snapshot;
 		});
+	}
+
+	get navCtrl(): Nav {
+		return this.injector.get(Nav);
 	}
 
 	public initializeApp() {

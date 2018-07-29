@@ -245,12 +245,12 @@ $wizardPage: (
 ================================================*/
 
 @mixin light-blend-mode {
-  background-color: theme-colors('blendModes', 'primary') !important;
+  background-color: rgba(41, 47, 54, 0.18);
   mix-blend-mode: multiply;
 }
 
 @mixin black-white-mode {
-    background-color: theme-colors('blendModes', 'primary') !important;
+    background-color: rgba(41, 47, 54, 0.18);
     background-blend-mode: multiply;
 }
 
@@ -264,7 +264,7 @@ $wizardPage: (
         height: 100%;
         top: 0;
         left: 0;
-        background-color: theme-colors('blendModes', 'primary');
+        background-color: rgba(41, 47, 54, 0.18);
         mix-blend-mode: multiply;
     }
 
@@ -275,7 +275,7 @@ $wizardPage: (
         height: 100%;
         top: 0;
         left: 0;
-        background-color: theme-colors('blendModes', 'secondary');
+        background-color: rgba(41, 47, 54, 0.18);
         mix-blend-mode: lighten;
     }
 }
