@@ -1,0 +1,54 @@
+<!--
+  Generated template for the FormPicturePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'form-picture.main_title' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="myForm" (ngSubmit)="sendEmail(myForm.value)">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>{{'form-picture.name'| translate}}</ion-label>
+        <ion-input name="name" formControlName="name" type="text"></ion-input>
+      </ion-item>
+      <br>
+      <div class="error-box" *ngIf="myForm.controls['name'].hasError('required') && myForm.controls['name'].touched">{{'form-picture.name-required' | translate}}</div>
+
+      <ion-item>
+        <ion-label floating>{{'form-picture.phone'| translate}}</ion-label>
+        <ion-input name="phone" formControlName="phone" type="text"></ion-input>
+      </ion-item>
+      <br>
+      <div class="error-box" *ngIf="myForm.controls['phone'].hasError('required') && myForm.controls['phone'].touched">{{'form-picture.phone-required' | translate}}</div>
+      <ion-item text-center>
+        <button type="button" (tap)="actionSheet()" ion-button>
+          <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-grid no-padding *ngIf="image">
+        <ion-row>
+          <ion-col no-padding col-12 col-md-6>
+            <ion-card background-size text-left>
+              <img [src]="image" alt="">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div margin text-center>
+
+        <button type="submit" [disabled]="!myForm.valid" ion-button>{{'form-picture.send' | translate}}</button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

@@ -47,6 +47,11 @@ export class NewsPage {
 				this.showNoNews = true;
 			} else {
 				for (let i = 0; i < r.length; i++) {
+					if (r[i].better_featured_image === null) {
+						r[i].backgroundImage = this.imgPlaceholder;
+					} else {
+						r[i].backgroundImage = r[i].better_featured_image.source_url;
+					}
 					r[i].animateClass = { "fade-in-left-item": false };
 					setTimeout(function() {
 						that.news.data.push(r[i]);

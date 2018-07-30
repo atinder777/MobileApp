@@ -38,7 +38,12 @@
 		"faculty": "Staff",
 		"settings": "Settings",
 		"contact": "Contact",
-		"about": "About"
+		"about": "About",
+		"weather": "Weather Information",
+		"market": "Market Prices",
+		"farmer": "Farmer Portal",
+		"crop": "Crop Residue Management",
+		"form": "Form"
 	},
 	"training": {
 		"main_title": "Training Schedule"
@@ -68,5 +73,19 @@
 		"venue": "Venue",
 		"agency": "Organizing Agency",
 		"details": "Details"
+	},
+	"weather": {
+		"main_title": "Weather Information"
+	},
+	"crop": {
+		"main_title": "Crop Residue Management"
+	},
+	"form-picture": {
+		"main_title": "Form",
+		"name": "Name",
+		"phone": "Phone Number",
+		"send": "Send",
+		"name-required": "Name is a required field.",
+		"phone-required": "Phone Number is a required field."
 	}
 }

@@ -35,4 +35,19 @@ export class MorePage {
 	openAbout() {
 		this.navCtrl.push("AboutPage");
 	}
+	openWeather() {
+		this.navCtrl.push("WeatherPage");
+	}
+	openCrop() {
+		this.navCtrl.push("CropPage");
+	}
+	openForm() {
+		this.navCtrl.push("FormPicturePage");
+	}
+	openMarket() {
+		window.open("http://agmarknet.gov.in/", "_system");
+	}
+	openFarmer() {
+		window.open("http://www.pau.edu/fportalnew/", "_system");
+	}
 }

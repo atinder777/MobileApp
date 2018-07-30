@@ -21,6 +21,7 @@ import { TranslateModule, TranslateLoader, TranslatePipe } from "@ngx-translate/
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { PushProvider } from "../providers/push/push";
+import { Camera } from "@ionic-native/camera";
 
 @NgModule({
 	declarations: [MyApp],
@@ -41,6 +42,7 @@ import { PushProvider } from "../providers/push/push";
 	entryComponents: [MyApp],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	providers: [
+		Camera,
 		OneSignal,
 		NativeStorage,
 		EmailComposer,

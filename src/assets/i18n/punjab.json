@@ -41,7 +41,12 @@
 		"faculty": "ਸਟਾਫ਼",
 		"settings": "ਸੈਟਿੰਗਾਂ",
 		"contact": "ਸੰਪਰਕ ਕਰੋ",
-		"about": "ਕੇ. ਵੀ. ਕੇ. ਬਾਰੇ"
+		"about": "ਕੇ. ਵੀ. ਕੇ. ਬਾਰੇ",
+		"weather": "ਮੌਸਮ ਦੀ ਜਾਣਕਾਰੀ",
+		"market": "ਮੰਡੀਆਂ ਦੇ ਭਾਅ",
+		"farmer": "ਕਿਸਾਨਾਂ ਲਈ ਜਾਣਕਾਰੀ",
+		"crop": "ਫਸਲਾਂ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਦਾ ਪ੍ਰਬੰਧ",
+		"form": "Form"
 	},
 	"training": {
 		"main_title": "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ"
@@ -71,5 +76,19 @@
 		"venue": "ਸਥਾਨ",
 		"agency": "ਪ੍ਰਬੰਧ",
 		"details": "ਵੇਰਵੇ"
+	},
+	"weather": {
+		"main_title": "ਮੌਸਮ ਦੀ ਜਾਣਕਾਰੀ"
+	},
+	"crop": {
+		"main_title": "ਫਸਲਾਂ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਦਾ ਪ੍ਰਬੰਧ"
+	},
+	"form-picture": {
+		"main_title": "Form",
+		"name": "Name",
+		"phone": "Phone Number",
+		"send": "Send",
+		"name-required": "Name is a required field.",
+		"phone-required": "Phone Number is a required field."
 	}
 }

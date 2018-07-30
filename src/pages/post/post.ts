@@ -30,12 +30,6 @@ export class PostPage {
 			this.category = res;
 		});
 
-		if (this.post.better_featured_image === null) {
-			this.headerImage = IMAGE_PLACEHOLDER;
-		} else {
-			this.headerImage = this.post.better_featured_image.source_url;
-		}
-
 		console.log("ionViewDidLoad PostPage");
 	}
 }

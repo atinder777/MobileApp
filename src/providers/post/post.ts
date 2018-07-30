@@ -16,6 +16,13 @@ export class PostProvider {
 	}
 
 	/**
+	 * @returns {Array} Returns an array of redidues/crop.
+	 */
+	getCrop() {
+		return this.http.get(`${URL_ENGLISH}/residue`);
+	}
+
+	/**
 	 * @returns {Array} Returns an array of news.
 	 */
 	getActivities() {
