@@ -17,7 +17,7 @@
     height: 250px;
     background-size: cover;
     background-position: center;
-    @include darkening-blend-mode;
+    @include darkening-green-blend-mode;
     [header-title] {
         padding-right: 10%;
         z-index: 99999;
@@ -34,7 +34,7 @@
         position: relative;
     }
     p {
-        font-size: 14px !important;
+        font-size: 15px !important;
         color: theme-colors('textColors', 'secondaryBase');
         z-index: 99999;
         position: relative;
@@ -42,7 +42,7 @@
 }
 
 .header-side-menu {
-    font-size: 20px !important;
+    font-size: 23px !important;
     line-height: 30px !important;
 }
 

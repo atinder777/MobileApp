@@ -25,10 +25,18 @@ export class PostPage {
 	}
 
 	ionViewWillEnter() {
-		this.postProvider.getCategory(this.post.categories[0]).subscribe(res => {
-			//Gets the category from the first item
-			this.category = res;
-		});
+		if (this.post.categories != null) {
+			this.postProvider.getCategory(this.post.categories[0]).subscribe(res => {
+				//Gets the category from the first item
+				this.category = res;
+			});
+		}
+
+		if (this.post.better_featured_image === null) {
+			this.post.backgroundImage = IMAGE_PLACEHOLDER;
+		} else {
+			this.post.backgroundImage = this.post.better_featured_image.source_url;
+		}
 
 		console.log("ionViewDidLoad PostPage");
 	}

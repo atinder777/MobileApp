@@ -43,7 +43,9 @@
 		"market": "Market Prices",
 		"farmer": "Farmer Portal",
 		"crop": "Crop Residue Management",
-		"form": "Form"
+		"form": "Send Crop Image for Advice",
+		"feedback": "Provide Feedback",
+		"whatsapp": "WhatsApp Group"
 	},
 	"training": {
 		"main_title": "Training Schedule"
@@ -81,11 +83,24 @@
 		"main_title": "Crop Residue Management"
 	},
 	"form-picture": {
-		"main_title": "Form",
+		"main_title": "Send Crop Image for Advice",
 		"name": "Name",
 		"phone": "Phone Number",
-		"send": "Send",
+		"send": "Send"
+	},
+	"feedback": {
+		"main_title": "Provide Feedback",
+		"name": "Name",
+		"phone": "Phone Number",
+		"feedback-message": "Feedback Message",
+		"send": "Send"
+	},
+	"form-validations": {
 		"name-required": "Name is a required field.",
-		"phone-required": "Phone Number is a required field."
+		"phone-required": "Phone Number is a required field.",
+		"message-required": "Feedback Message is a required field."
+	},
+	"whatsapp": {
+		"main_title": "WhatsApp Group"
 	}
 }

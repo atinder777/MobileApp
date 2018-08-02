@@ -46,7 +46,9 @@
 		"market": "ਮੰਡੀਆਂ ਦੇ ਭਾਅ",
 		"farmer": "ਕਿਸਾਨਾਂ ਲਈ ਜਾਣਕਾਰੀ",
 		"crop": "ਫਸਲਾਂ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਦਾ ਪ੍ਰਬੰਧ",
-		"form": "Form"
+		"form": "Form",
+		"feedback": "Feedback",
+		"whatsapp": "WhatsApp Group"
 	},
 	"training": {
 		"main_title": "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ"
@@ -87,8 +89,21 @@
 		"main_title": "Form",
 		"name": "Name",
 		"phone": "Phone Number",
-		"send": "Send",
+		"send": "Send"
+	},
+	"feedback": {
+		"main_title": "Feedback",
+		"name": "Name",
+		"phone": "Phone Number",
+		"feedback-message": "Feedback Message",
+		"send": "Send"
+	},
+	"form-validations": {
 		"name-required": "Name is a required field.",
-		"phone-required": "Phone Number is a required field."
+		"phone-required": "Phone Number is a required field.",
+		"message-required": "Feedback Message is a required field."
+	},
+	"whatsapp": {
+		"main_title": "WhatsApp Group"
 	}
 }

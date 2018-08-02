@@ -245,13 +245,39 @@ $wizardPage: (
 ================================================*/
 
 @mixin light-blend-mode {
-  background-color: rgba(41, 47, 54, 0.18);
+  background-color: rgba(41, 47, 54, 0.35);
   mix-blend-mode: multiply;
 }
 
 @mixin black-white-mode {
-    background-color: rgba(41, 47, 54, 0.18);
+    background-color: rgba(41, 47, 54, 0.35);
     background-blend-mode: multiply;
+}
+
+@mixin darkening-green-blend-mode {
+    @include black-white-mode;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(6, 153, 13, 0.301);
+        mix-blend-mode: multiply;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(6, 153, 13, 0.301);
+        mix-blend-mode: lighten;
+    }
 }
 
 @mixin darkening-blend-mode {
@@ -264,7 +290,7 @@ $wizardPage: (
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(41, 47, 54, 0.18);
+        background-color: rgba(41, 47, 54, 0.35);
         mix-blend-mode: multiply;
     }
 
@@ -275,7 +301,7 @@ $wizardPage: (
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(41, 47, 54, 0.18);
+        background-color: rgba(41, 47, 54, 0.35);
         mix-blend-mode: lighten;
     }
 }

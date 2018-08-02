@@ -58,6 +58,13 @@ export class PostProvider {
 	}
 
 	/**
+	 * @returns { Array } Returns the whatsapp content.
+	 */
+	getWhatsapp() {
+		return this.http.get(`${URL_ENGLISH}/whatsapp`);
+	}
+
+	/**
 	 * @returns { Array } Returns the Training page content.
 	 */
 	getPostByCategory(id) {

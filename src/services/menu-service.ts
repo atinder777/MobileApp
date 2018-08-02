@@ -22,28 +22,6 @@ export class MenuService {
 					component: "HomePage"
 				},
 				{
-					title: "Activities",
-					icon: "icon-calendar",
-					component: "EventsPage",
-					showMenu: true
-				},
-				{
-					title: "Training Schedule",
-					icon: "icon-clipboard",
-					component: "TrainingPage",
-					showMenu: true
-				},
-				{
-					title: "Seed Avaibility",
-					icon: "icon-leaf",
-					component: "SeedPage"
-				},
-				{
-					title: "Staff",
-					icon: "icon-library",
-					component: "FacultyPage"
-				},
-				{
 					title: "Contact",
 					icon: "icon-phone-in-talk",
 					component: "ContactPage"
@@ -65,28 +43,6 @@ export class MenuService {
 					title: "ਮੁੱਖ ਪੰਨਾ",
 					icon: "icon-home",
 					component: "HomePage"
-				},
-				{
-					title: "ਸੂਚਨਾਵਾਂ",
-					icon: "icon-calendar",
-					component: "EventsPage",
-					showMenu: true
-				},
-				{
-					title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ",
-					icon: "icon-clipboard",
-					component: "TrainingPage",
-					showMenu: true
-				},
-				{
-					title: "ਉਪਲਬਧ ਬੀਜ",
-					icon: "icon-leaf",
-					component: "SeedPage"
-				},
-				{
-					title: "ਸਟਾਫ਼",
-					icon: "icon-library",
-					component: "FacultyPage"
 				},
 				{
 					title: "ਸੰਪਰਕ",

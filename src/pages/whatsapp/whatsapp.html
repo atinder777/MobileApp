@@ -1,0 +1,21 @@
+<!--
+  Generated template for the WhatsappPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'whatsapp.main_title' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list no-margin *ngIf="whatsapp != null">
+    <ion-item [ngClass]="item.animateClass" border no-lines *ngFor="let item of whatsapp" (tap)="openGroup(item.group_link)">
+      <span item-start>{{item.title.rendered}}</span>
+      <i icon-small item-end class="icon icon-whatsapp"></i>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,11 @@
+import { NgModule } from "@angular/core";
+import { IonicPageModule } from "ionic-angular";
+import { FeedbackPage } from "./feedback";
+import { TranslateModule } from "../../../node_modules/@ngx-translate/core";
+
+@NgModule({
+	declarations: [FeedbackPage],
+	imports: [IonicPageModule.forChild(FeedbackPage), TranslateModule],
+	exports: [FeedbackPage]
+})
+export class FeedbackPageModule {}

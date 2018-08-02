@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams, Nav } from "ionic-angular";
+import { PostProvider } from "../../providers/post/post";
 
 /**
  * Generated class for the MorePage page.
@@ -14,7 +15,7 @@ import { IonicPage, NavController, NavParams, Nav } from "ionic-angular";
 	templateUrl: "more.html"
 })
 export class MorePage {
-	constructor(public navCtrl: Nav, public navParams: NavParams) {}
+	constructor(public navCtrl: Nav, public navParams: NavParams, private postProvider: PostProvider) {}
 
 	ionViewDidLoad() {
 		console.log("ionViewDidLoad MorePage");
@@ -44,10 +45,16 @@ export class MorePage {
 	openForm() {
 		this.navCtrl.push("FormPicturePage");
 	}
+	openFeedback() {
+		this.navCtrl.push("FeedbackPage");
+	}
 	openMarket() {
 		window.open("http://agmarknet.gov.in/", "_system");
 	}
 	openFarmer() {
 		window.open("http://www.pau.edu/fportalnew/", "_system");
+	}
+	openWhatsapp() {
+		this.navCtrl.push("WhatsappPage");
 	}
 }

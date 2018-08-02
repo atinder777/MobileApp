@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams, AlertController } from "ionic-angular";
+import { IonicPage, NavController, NavParams, AlertController, Platform } from "ionic-angular";
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { EmailComposer } from "../../../node_modules/@ionic-native/email-composer";
 import { FormBuilder, FormGroup, Validators } from "../../../node_modules/@angular/forms";
@@ -22,6 +22,7 @@ import { ActionSheetController } from "ionic-angular";
 export class FormPicturePage {
 	image: any;
 	myForm: FormGroup;
+	atach: any;
 
 	constructor(
 		public navCtrl: NavController,
@@ -31,7 +32,8 @@ export class FormPicturePage {
 		private fb: FormBuilder,
 		private alertCtrl: AlertController,
 		private sanitizer: DomSanitizer,
-		private action: ActionSheetController
+		private action: ActionSheetController,
+		private platform: Platform
 	) {
 		this.myForm = this.fb.group({
 			name: [null, Validators.compose([Validators.required])],
@@ -55,7 +57,8 @@ export class FormPicturePage {
 		this.camera.getPicture(options).then(
 			imageData => {
 				console.log(imageData);
-				this.image = imageData;
+				this.image = this.sanitizer.bypassSecurityTrustUrl(imageData);
+				this.atach = imageData;
 				// let base64Image = "data:image/jpeg;base64," + imageData;
 			},
 			err => {
@@ -74,10 +77,12 @@ export class FormPicturePage {
 			});
 			alert.present();
 		} else {
+			let app = "gmail";
+
 			let email = {
-				app: "gmail",
-				to: "jonatanpietroski@gmail.com",
-				attachments: [this.image],
+				app: app,
+				to: "kvk-pathankot@pau.edu",
+				attachments: [this.atach],
 				subject: "New query from app",
 				body: `Name: ${val.name}<br> Phone: ${val.phone}`,
 				isHtml: true
@@ -87,6 +92,7 @@ export class FormPicturePage {
 				.then(
 					done => {
 						this.image = null;
+						this.atach = null;
 					},
 					err => {
 						console.log(err);

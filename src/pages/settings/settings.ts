@@ -70,9 +70,9 @@ export class SettingsPage {
 		if (item.type == "push") {
 			console.log("push type");
 			if (item.isChecked) {
-				// this.pushProvider.enablePush();
+				this.pushProvider.enablePush();
 			} else {
-				// this.pushProvider.disablePush();
+				this.pushProvider.disablePush();
 			}
 			this.storage.setItem("push", item);
 		}

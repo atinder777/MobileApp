@@ -73,9 +73,9 @@ export class MyApp {
 			this.storage.getItem("push").then(
 				res => {
 					if (res.isChecked) {
-						// this.pushProvider.enablePush();
+						this.pushProvider.enablePush();
 					} else {
-						// this.pushProvider.disablePush();
+						this.pushProvider.disablePush();
 					}
 				},
 				err => {
@@ -85,7 +85,7 @@ export class MyApp {
 							type: "push",
 							isChecked: true
 						});
-						// this.pushProvider.enablePush();
+						this.pushProvider.enablePush();
 					}
 				}
 			);
