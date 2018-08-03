@@ -4,7 +4,7 @@
 	},
 	"news": {
 		"main_title": "ਸੂਚਨਾਵਾਂ",
-		"no_data": "ਕੋੲੀ ਵੇਰਵੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ"
+		"no_data": "ਕੋਈ ਵੇਰਵੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ"
 	},
 	"post": { "main_title": "ਵੇਰਵੇ" },
 	"seed": {
@@ -46,12 +46,12 @@
 		"market": "ਮੰਡੀਆਂ ਦੇ ਭਾਅ",
 		"farmer": "ਕਿਸਾਨਾਂ ਲਈ ਜਾਣਕਾਰੀ",
 		"crop": "ਫਸਲਾਂ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਦਾ ਪ੍ਰਬੰਧ",
-		"form": "Form",
-		"feedback": "Feedback",
-		"whatsapp": "WhatsApp Group"
+		"form": "ਸਲਾਹ ਲੈਣ ਲਈ ਫਸਲ਼ ਦੀ ਫੋਟੋ ਭੇਜੋ",
+		"feedback": "ਆਪਣੇ ਵਿਚਾਰ ਦਿਓ",
+		"whatsapp": "ਵਾਅਟਸਐਪ ਗਰੁੱਪ ਨਾਲ ਜੁੜੋ"
 	},
 	"training": {
-		"main_title": "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ"
+		"main_title": "ਸਿਖਲਾਈ ਸਮਾਂਸੂਚੀ"
 	},
 	"training_grid": {
 		"main_title": "ਸਿਖਲਾਈ"
@@ -66,7 +66,7 @@
 		"venue": "ਸਥਾਨ",
 		"agency": "ਪ੍ਰਬੰਧ",
 		"details": "ਵੇਰਵੇ",
-		"no_training": "No Trainings Available"
+		"no_training": "ਕੋਈ ਵੇਰਵੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ"
 	},
 	"training_post": {
 		"main_title": "ਸਿਖਲਾਈ ਦੇ ਵੇਰਵੇ",
@@ -86,24 +86,24 @@
 		"main_title": "ਫਸਲਾਂ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਦਾ ਪ੍ਰਬੰਧ"
 	},
 	"form-picture": {
-		"main_title": "Form",
-		"name": "Name",
-		"phone": "Phone Number",
-		"send": "Send"
+		"main_title": "ਸਲਾਹ ਲੈਣ ਲਈ ਫਸਲ਼ ਦੀ ਫੋਟੋ ਭੇਜੋ",
+		"name": "ਤੁਹਾਡਾ ਨਾਮ",
+		"phone": "ਫੋਨ ਨੰਬਰ",
+		"send": "ਭੋਜੋ"
 	},
 	"feedback": {
-		"main_title": "Feedback",
-		"name": "Name",
-		"phone": "Phone Number",
-		"feedback-message": "Feedback Message",
-		"send": "Send"
+		"main_title": "ਆਪਣੇ ਵਿਚਾਰ ਦਿਓ",
+		"name": "ਨਾਮ",
+		"phone": "ਫੋਨ ਨੰਬਰ",
+		"feedback-message": "ਤੁਹਾਡੇ ਵਿਚਾਰ",
+		"send": "ਭੇਜੋ"
 	},
 	"form-validations": {
-		"name-required": "Name is a required field.",
-		"phone-required": "Phone Number is a required field.",
-		"message-required": "Feedback Message is a required field."
+		"name-required": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਨਾਮ ਭਰੋ",
+		"phone-required": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਫੋਨ ਨੰਬਰ ਭਰੋ",
+		"message-required": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਵਿਚਾਰ ਲਿਖੋ"
 	},
 	"whatsapp": {
-		"main_title": "WhatsApp Group"
+		"main_title": "ਵਾਅਟਸਐਪ ਗਰੁੱਪ"
 	}
 }
