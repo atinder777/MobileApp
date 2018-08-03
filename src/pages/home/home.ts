@@ -73,7 +73,7 @@ export class HomePage {
 			{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
 			{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
 			{ page: "TrainingPage", icon: "ios-clipboard", title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ" },
-			{ page: "MorePage", icon: "ios-more", title: "ਉਪਲਬਧ ਬੀਜ" }
+			{ page: "MorePage", icon: "ios-more", title: "ਹੋਰ" }
 		];
 	}
 }

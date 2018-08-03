@@ -27,6 +27,21 @@ export class MenuService {
 					component: "ContactPage"
 				},
 				{
+					title: "Provide Feedback",
+					icon: "icon-message-processing",
+					component: "FeedbackPage"
+				},
+				{
+					title: "WhatsApp Group",
+					icon: "icon-whatsapp",
+					component: "WhatsappPage"
+				},
+				{
+					title: "Send Crop Image for Advice",
+					icon: "icon-clipboard-text",
+					component: "FormPicturePage"
+				},
+				{
 					title: "Settings",
 					icon: "icon-settings",
 					component: "SettingsPage"
@@ -48,6 +63,21 @@ export class MenuService {
 					title: "ਸੰਪਰਕ",
 					icon: "icon-phone-in-talk",
 					component: "ContactPage"
+				},
+				{
+					title: "ਆਪਣੇ ਵਿਚਾਰ ਦਿਓ",
+					icon: "icon-message-processing",
+					component: "FeedbackPage"
+				},
+				{
+					title: "ਵਾਅਟਸਐਪ ਗਰੁੱਪ ਨਾਲ ਜੁੜੋ",
+					icon: "icon-whatsapp",
+					component: "WhatsappPage"
+				},
+				{
+					title: "ਸਲਾਹ ਲੈਣ ਲਈ ਫਸਲ਼ ਦੀ ਫੋਟੋ ਭੇਜੋ",
+					icon: "icon-clipboard-text",
+					component: "FormPicturePage"
 				},
 				{
 					title: "ਸੈਟਿੰਗਾਂ",

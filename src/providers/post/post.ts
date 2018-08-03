@@ -12,35 +12,35 @@ export class PostProvider {
 	 * @returns {Array} Returns an array of news.
 	 */
 	getNews() {
-		return this.http.get(`${URL_ENGLISH}/posts?categories=3`);
+		return this.http.get(`${URL_ENGLISH}/posts?categories=3?per_page=100`);
 	}
 
 	/**
 	 * @returns {Array} Returns an array of redidues/crop.
 	 */
 	getCrop() {
-		return this.http.get(`${URL_ENGLISH}/residue`);
+		return this.http.get(`${URL_ENGLISH}/residue?per_page=100`);
 	}
 
 	/**
 	 * @returns {Array} Returns an array of news.
 	 */
 	getActivities() {
-		return this.http.get(`${URL_ENGLISH}/posts?categories=17`);
+		return this.http.get(`${URL_ENGLISH}/posts?categories=17?per_page=100`);
 	}
 
 	/**
 	 * @returns { Array } Returns an Array of experts.
 	 */
 	getExperts() {
-		return this.http.get(`${URL_ENGLISH}/experts`);
+		return this.http.get(`${URL_ENGLISH}/experts?per_page=100`);
 	}
 
 	/**
 	 * @returns { Array } Returns an Array of seeds.
 	 */
 	getSeeds() {
-		return this.http.get(`${URL_ENGLISH}/seed`);
+		return this.http.get(`${URL_ENGLISH}/seed?per_page=100`);
 	}
 
 	/**
@@ -61,7 +61,7 @@ export class PostProvider {
 	 * @returns { Array } Returns the whatsapp content.
 	 */
 	getWhatsapp() {
-		return this.http.get(`${URL_ENGLISH}/whatsapp`);
+		return this.http.get(`${URL_ENGLISH}/whatsapp?per_page=100`);
 	}
 
 	/**
