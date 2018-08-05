@@ -72,7 +72,7 @@ export class HomePage {
 		this.params.data = [
 			{ page: "NewsPage", icon: "ios-information-circle", title: "ਸੂਚਨਾਵਾਂ" },
 			{ page: "EventsPage", icon: "ios-calendar", title: "ਗਤੀਵਿਧੀਆਂ" },
-			{ page: "TrainingPage", icon: "ios-clipboard", title: "ਸਿਖਲਾਈ ਸਮਾਸੂਚੀ" },
+			{ page: "TrainingPage", icon: "ios-clipboard", title: "ਸਿਖਲਾਈ ਸਮਾਂਸੂਚੀ" },
 			{ page: "MorePage", icon: "ios-more", title: "ਹੋਰ" }
 		];
 	}
