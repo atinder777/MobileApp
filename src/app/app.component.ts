@@ -17,7 +17,8 @@ import { OneSignal } from "../../node_modules/@ionic-native/onesignal";
 	providers: [MenuService]
 })
 export class MyApp {
-	@ViewChild(Nav) nav: Nav;
+	@ViewChild(Nav)
+	nav: Nav;
 
 	rootPage = "HomePage";
 	pages: any;
@@ -57,15 +58,6 @@ export class MyApp {
 			// Okay, so the platform is ready and our plugins are available.
 			// Here you can do any higher level native things you might need
 
-			this.platform.registerBackButtonAction(() => {
-				if (this.menu.isOpen()) {
-					this.menu.close();
-				} else if (this.nav.canGoBack()) {
-					this.nav.pop();
-				} else {
-					//don't do anything
-				}
-			});
 			// Okay, so the platform is ready and our plugins are available.
 			// Here you can do any higher level native things you might need.
 			this.statusBar.styleDefault();
